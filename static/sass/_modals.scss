@@ -1,0 +1,59 @@
+// time to show some information that's more or less important than the base window
+.modal-go:hover {
+	cursor:pointer;
+}
+
+// background settings
+.modal-bg {
+	z-index: 1000;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	background: $modal-close-bg;
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include transition;
+	&:hover {
+		background: $modal-close-hover-bg;
+	}
+}
+
+// window settings
+.modal {
+	background: $modal-window-bg;
+	z-index: 1001;
+	display: none;
+	position: fixed;
+	top: 2rem;
+	left:0;
+	margin: 0 12.5vw;
+	padding:3rem 3rem 1rem 3rem;
+	width: 75vw;
+	max-height: 90vh;
+	overflow: scroll;
+	@include shadow;
+	&.medium {
+		width: 50vw;
+		margin: 0 25vw;
+	}
+	&.small {
+		width: 25vw;
+		margin: 0 37.5vw;
+	}
+}
+
+@media (max-width: $small-breakpoint) {
+	.modal {
+		margin: 0 5vw;
+		width: 90vw;
+		&.medium {
+			margin: 0 5vw;
+			width: 90vw;
+		}
+		&.small {
+			margin: 0 5vw;
+			width: 90vw;
+		}
+	}
+}

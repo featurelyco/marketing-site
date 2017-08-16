@@ -1,0 +1,187 @@
+// All the type type
+
+// Headings
+h1 {
+	font-family: $heading-font-family;
+	font-size: $h1-font-size;
+	margin-bottom: $h1-font-size;
+	color:$heading-color;
+	.title {
+		margin-bottom: 0;
+	}
+	small {
+		font-size: 0.75em;
+		color:$sub-head-color;
+	}
+}
+h2 {
+	font-family: $heading-font-family;
+	font-size: $h2-font-size;
+	margin-bottom: $h2-font-size;
+	color:$heading-color;
+	small {
+		font-size: 0.75em;
+		color:$sub-head-color;
+	}
+}
+h3 {
+	font-family: $heading-font-family;
+	font-size: $h3-font-size;
+	margin-bottom: $h3-font-size;
+	color:$heading-color;
+	small {
+		font-size: 0.75em;
+		color:$sub-head-color;
+	}
+}
+h4 {
+	font-family: $heading-font-family;
+	font-size: $h4-font-size;
+	margin-bottom: $h4-font-size;
+	color:$heading-color;
+	small {
+		font-size: 0.75em;
+		color:$sub-head-color;
+	}
+}
+h5 {
+	font-family: $heading-font-family;
+	font-size: $h5-font-size;
+	margin-bottom: $h5-font-size;
+	color:$heading-color;
+	small {
+		font-size: 0.75em;
+		color:$sub-head-color;
+	}
+}
+h6 {
+	font-family: $heading-font-family;
+	font-size: $h6-font-size;
+	margin-bottom: $h6-font-size;
+	color:$heading-color;
+	small {
+		font-size: 0.75em;
+		color:$sub-head-color;
+	}
+}
+
+h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
+	margin-bottom: 0;
+}
+
+p {
+	font-size: $body-copy-font-size;
+	line-height: rem-me($body-copy-font-size * 1.8);
+	font-family: $body-copy-font-family;
+	margin-bottom: rem-me($body-copy-font-size * 1.8);
+}
+strong {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
+small {
+	font-size:  rem-me($body-copy-font-size * 0.8);
+	line-height: rem-me($body-copy-font-size * 1.8);
+	font-family: $body-copy-font-family;
+}
+li {
+	font-size: $body-copy-font-size;
+	line-height: rem-me($body-copy-font-size * 1.8);
+	font-family: $body-copy-font-family;
+}
+a {
+	line-height: rem-me($body-copy-font-size * 1.8);
+	font-family: $body-copy-font-family;
+	font-size: 1em;
+	color:$link-color;
+	text-decoration: none;
+	&:hover {
+		color:lighten($link-color, 10%);
+		text-decoration: underline;
+	}
+}
+
+// Lists
+ul {
+	list-style-position: inside;
+	&.square {
+		list-style-type: square;
+	}
+	&.circle {
+		list-style-type: circle;
+	}
+	&.disc {
+		list-style-type: disc;
+	}
+	&.inline li {
+		display: inline;
+		margin-right: 0.5rem;
+	}
+	&.inline-bar li {
+		display: inline;
+		padding: 0 rem-me(6) 0 rem-me(3);
+		border-right:1px solid $steel;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+			border-right: none;
+		}
+	}
+	&.inline-slash li {
+		display: inline;
+		padding: 0 0 0 rem-me(3);
+		&::after {
+			content:'/';
+			margin-left: rem-me(6);
+		}
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child::after {
+			content:'';
+		}
+	}
+	li {
+		ul {
+			margin-left: 1rem;
+		}
+	}
+}
+ol {
+	@extend ul;
+	&.alpha, &.alpha-upper {
+		list-style-type: upper-alpha;
+	}
+	&.alpha-lower {
+		list-style-type: lower-alpha;
+	}
+	&.number {
+		list-style-type: decimal;
+	}
+}
+dl {
+	@extend ul;
+	dt {
+		font-size: $body-copy-font-size;
+		line-height: rem-me($body-copy-font-size * 1.8);
+		font-family: $body-copy-font-family;
+	}
+	dd {
+		@extend p;
+	}
+}
+
+// blockquotes
+blockquote {
+	background: $bq-bg;
+	border:1px solid darken($bq-bg, 20%);
+	font-family: $bq-text;
+	font-size: $bq-text-size;
+	line-height: ($bq-text-size * 1.5);
+	color:$bq-color;
+	padding:2rem;
+}

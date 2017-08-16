@@ -1,0 +1,58 @@
+// Pricing Tables
+ul.pricing-table, .pricing-table {
+	background: $pricing-table-bg;
+	border-top:1px solid $pricing-table-border-color;
+	border-bottom:1px solid $pricing-table-border-color;
+	border-right:1px solid $pricing-table-border-color;
+	width: 100%;
+	&.clm {
+		padding:0;
+	}
+	.title {
+		background: $pricing-table-title-bg;
+		color: $pricing-table-title-color;
+		text-align: center;
+		font-size: $pricing-table-title-size;
+		font-family: $pricing-table-title-font;
+		padding:1rem;
+		border-bottom:1px solid $pricing-table-border-color;
+	}
+	.price {
+		text-align: center;
+		background: $pricing-table-price-bg;
+		color: $pricing-table-price-color;
+		font-size: $pricing-table-price-size;
+		border-bottom:1px solid $pricing-table-border-color;
+		padding:1em;
+	}
+	.information {
+		border-bottom:1px solid $pricing-table-border-color;
+		background: $pricing-table-bg;
+//		font-style: italic;
+		color: $pricing-table-info-color;
+		text-align: center;
+		font-size: $pricing-table-size;
+		padding:0.5rem 1.5rem;
+	}
+	.included {
+		border-bottom:1px solid $pricing-table-border-color;
+		text-align: center;
+		font-size: $pricing-table-size;
+		padding:0.5rem 1.5rem;
+		@include odd {
+			background: $pricing-table-alt-bg;
+		}
+	}
+	.not-included {
+		border-bottom:1px solid $pricing-table-border-color;
+		text-align: center;
+		font-size: $pricing-table-size;
+		padding:0.5rem 1.5rem;
+	}
+	&.rounded {
+		.title {
+			border-top-right-radius: ($global-radius - 1px);
+			border-top-left-radius: ($global-radius - 1px);
+		}
+	}
+}

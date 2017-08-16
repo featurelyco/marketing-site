@@ -1,0 +1,17 @@
+@media print {
+	body {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background: $white;
+		#progress-tray {
+			display: none;
+		}
+		.hide-for-print {
+			display: none;
+		}
+		.content .l8.clm {
+			width: 100%;
+		}
+	}
+}

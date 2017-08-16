@@ -1,0 +1,258 @@
+// gray scale CSS color names
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
+
+// Featurely Colors
+$red: #E44C3B;
+$blue: #3C96D2;
+$green: #27B899;
+$gray: #2C3E4F;
+$yellow: #F19C1F;
+
+// Colors!!!
+$primary: $red;
+$secondary: $green;
+$accent: #50E3C2;
+$error: $yellow;
+$success: $green;
+$alert: #FC7D3B;
+$note: #316BAE;
+$action:#FC7D3B;
+$light-gray: $gainsboro;
+$dark-gray: #424D5D;
+
+// Font settings
+$sans-serif:'Saira Condensed', 'Helvetica Neue Regular', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$serif: Georgia, "Times New Roman", Times, serif;
+$brand-font: 'Satisfy', sans-serif;
+$body-copy:$sans-serif;
+
+// Utility
+$global-radius:5px;
+$hr-size:1px;
+$hr-top-color:$white;
+$hr-bottom-color:$white-smoke;
+
+// Headings
+$h1-font-size:rem-me(32);
+$h2-font-size:rem-me(28);
+$h3-font-size:rem-me(24);
+$h4-font-size:rem-me(20);
+$h5-font-size:rem-me(16);
+$h6-font-size:rem-me(16);
+$heading-font-family:$sans-serif;
+$heading-color:$dark-gray;
+$sub-head-color: $steel;
+
+// Body copy
+$body-copy-font-size: 14px;
+$body-copy-color: $steel;
+$body-copy-font-family: $sans-serif;
+
+// Links
+$link-color: $primary;
+
+// Header
+$header-bg:#313A48;
+$header-height:rem-me(60);
+
+// Navigation
+$nav-height:74px;
+$nav-bg:transparent;
+$nav-direction:right; // Sets the float for the link
+$nav-font-size:$body-copy-font-size;
+$nav-font-family:$sans-serif;
+$nav-padding:20px;
+$nav-hover-bg:$primary;
+$nav-color:$primary;
+$nav-hover-color:$white;
+$drop-marker-color:rgba($black, 0.4);
+$divider-color:$gainsboro;
+
+// Mega Menu
+$mega-menu-bg:$snow;
+$mega-menu-link-color:$primary;
+$mega-menu-link-hover:$white;
+$mega-menu-link-bg:$primary;
+
+//Off Canvas Nav
+$nav-break-point:$medium-breakpoint;
+$off-canvas-side:left;  // set left or right
+$off-canvas-width:275px; // leave in pixels
+$off-canvas-bg:$tuatara;
+$off-canvas-link-color:$white;
+$off-canvas-drop-bg-color:$white;
+$off-canvas-drop-link-color:$primary;
+$off-canvas-drop-link-color-hover:$white;
+
+// Buttons
+$button-style: flat;  // flat or gradient
+$button-font: $sans-serif;
+$action-color: $red;
+$button-radius: $global-radius;
+$secondary-action-color:$blue;
+$button-color: $blue;
+$success-color:$green;
+$info-color: $note;
+$error-color:$error;
+$button-text-color: $white;
+$disabled-color: $gainsboro;
+
+$humongous-big-button-size: 20px;
+$large-button-size:24px;
+$medium-button-size:16px;
+$small-button-size:12px;
+
+// Blockquote
+$bq-bg: $white;
+$bq-text: $serif;
+$bq-text-size: 1.5rem;
+$bq-color: $steel;
+
+//Forms
+$label-style: inner;  // Can be outer or inner
+$label-font-size: 16px;
+$label-font-color:$oil;
+$label-focus-font-color:$secondary;
+$label-complete-font-color:darken(#f5f5f5,20%);
+$input-height: 62px; // Basic math is surprisingly difficult in SASS, so leave this value in pixels to calculate the padding and text size accordingly
+$input-focus-height: 62px;
+$input-bg:$white;
+$input-focus-bg:$white;
+$input-complete-bg:$white;
+$input-font-size: 16px;
+$input-border-color:$gainsboro;
+$input-border-focus-color:$secondary;
+$input-border-complete-color:$smoke;
+$input-font-color:$oil;
+$input-placeholder-color:$jumbo;
+$input-placeholder-text-align: left;
+
+// Alerts
+$alert-bg:$white;
+
+// Iconic
+$icon-primary:$gray;
+$icon-secondary:$gray;
+
+// Modals
+$modal-close-bg:rgba($black,0.6);
+$modal-close-hover-bg:rgba($black,0.8);
+$modal-window-bg:$white;
+
+// Panel
+$panel-bg:$white;
+$panel-border-color:$gainsboro;
+
+// Tabels
+$table-bg: $white;
+$table-th-bg:$white;
+$table-th-color:$oil;
+$table-border-color: $snow;
+$table-alt-row: #F3F3F3;
+
+//Pricing Tables
+$pricing-table-bg: $white;
+$pricing-table-alt-bg:$snow;
+$pricing-table-border-color:$gainsboro;
+$pricing-table-title-bg:$red;
+$pricing-table-title-color:lighten($red, 20%);
+$pricing-table-title-font:$sans-serif;
+$pricing-table-title-size:rem-me(36);
+$pricing-table-price-bg:$white;
+$pricing-table-price-color:$dark-gray;
+$pricing-table-price-size:rem-me(36);
+$pricing-table-info-color:$jumbo;
+$pricing-table-size:rem-me(15);
+
+// Progress Bar
+$progress-height:20px;
+$progress-bg:$white;
+$progress-border-color:$white;
+$progress-border-width:1px;
+$progress-complete-color:$accent;
+$progress-tick-color:$black;
+$progress-tick-height:5px;
+$progress-tick-alignment:6px;
+$progress-donut-bg:lighten(#313A48,2%);
+$progress-donut-complete-color:$accent;
+
+// Tooltips
+$tooltip-span-color:$dark-gray;
+$tooltip-span-font-style:normal;
+$tooltip-tip-bg:rgba($black,0.8);
+$tooltip-tip-width:rem-me(250);
+$tooltip-tip-font-size:rem-me(14);
+$tooltip-tip-color:$white;
+$tooltip-tip-tail-size:6px;
+
+// Range Sliders
+$range-handle-height:19px;
+$range-handle-width:41px;
+$range-handle-border-radius:$global-radius;
+$range-handle-border-color:#E1961A;
+$range-handle-color:#F5A623;
+$range-handle-color-active:$yellow;
+$range-default-track-bg:$white;
+$range-active-track-bg:$accent;
+$range-track-border-color:$gainsboro;
+$range-track-height:7px;
+$toggle-handle-off-bg-color:blue;
+$range-slider-box-shadow:$white;
+$range-output-bg:transparent;
+$range-output-color:$dark-gray;
+$range-output-width:60px;
+$range-output-size:14px;
+$range-output-border-radius:3px;
+
+// Accordion
+$accordion-title-bg:$vapor;
+$accordion-title-font-size:rem-me(16);
+$accordion-title-font-color:$steel;
+$accordion-title-padding:10px;
+$accordion-gutter:1px;
+
+// Slider
+$slider-top-margin:3rem;
+$slider-bg:$white;
+$slider-slide-bg:$white;
+$slider-slide-padding:2rem 6rem;
+$slider-button-color:$black;
+$slider-button-color-hover:$yellow;
+
+// Tabs
+$tab-bar-bg:#F3F3F3;
+$tabs-bg:#F3F3F3;
+$tabs-bg-active:$yellow;
+$tabs-active-color:#222;
+$tabs-color:$white;
+$tabs-content-bg:#F3F3F3;
+$tabs-tab-padding:5px 8px;
+
+// Jquery UI
+$jquery-ui-header-bg: #e9e9e9;
+$jquery-ui-header-text: #333;
+$jquery-ui-header-border: #ddd;
+$jquery-ui-active-bg: #007fff;
+$jquery-ui-active-border:#007eff;
+$jquery-ui-active-text:#fff;
+$jquery-ui-highlight-bg: #fffa90;
+$jquery-ui-highlight-border:#dad55e;
+$jquery-ui-highlight-text:#777620;

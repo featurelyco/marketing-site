@@ -1,0 +1,90 @@
+// Mega Menu
+nav.mega-menu {
+	float:$nav-direction;
+	display: inline-block;
+	.off-canvas {
+		display: none;
+	}
+	ul {
+		list-style-type: none;
+		&.divider {
+			li {
+				border-left:1px solid $divider-color;
+				width: auto;
+				margin-right:-4px;
+				&:hover {
+					background: $nav-hover-bg;
+				}
+			}
+		}
+		li {
+			display: inline-block;
+			height: auto;
+			&:hover {
+				background: $nav-hover-bg;
+			}
+			a {
+				padding: (($nav-height - $nav-font-size)/2) $nav-padding;
+				font-size: $nav-font-size;
+				line-height: 1em;
+				display: block;
+				color:$nav-color;
+				&:hover {
+					color: $nav-hover-color;
+				}
+			}
+			&.drop {
+				a {
+					padding: (($nav-height - $nav-font-size)/2) $nav-padding + 10px (($nav-height - $nav-font-size)/2) $nav-padding;
+					font-size: $nav-font-size;
+					line-height: 1em;
+					color:$nav-color;
+				}
+				&:hover {
+					a {
+						color:$nav-hover-color;
+
+					}
+				}
+				// Mega menu stylz take over
+				ul.drop-menu {
+					display: none;
+					position:fixed;
+					background: $mega-menu-bg;
+					left:0;
+					right:0;
+					top:$nav-height;
+					width: 100vw;
+					&.c-4  li {
+						width: 24%;
+					}
+					li {
+						display: inline-block;
+						background: $mega-menu-bg;
+						a {
+							color:$mega-menu-link-color;
+							&:hover {
+								color:$mega-menu-link-hover;
+								background: $mega-menu-link-bg;
+							}
+						}
+						ul.sub-menu {
+							li {
+								display: list-item;
+								width: 100%;
+								background: $mega-menu-bg;
+								a {
+									color:$mega-menu-link-color;
+									&:hover {
+										color:$mega-menu-link-hover;
+										background: $mega-menu-link-bg;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

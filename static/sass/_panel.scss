@@ -1,0 +1,6 @@
+// Panel
+.panel {
+	background: $panel-bg;
+	border:1px solid $panel-border-color;
+	padding: gutter-maker($gutter);
+}

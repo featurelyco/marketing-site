@@ -1,0 +1,27 @@
+dl.accordion {
+	dt {
+		font-size: $accordion-title-font-size;
+		color: $accordion-title-font-color;
+		line-height: rem-me($body-copy-font-size * 1.8);
+		font-family: $body-copy-font-family;
+		background: $accordion-title-bg;
+		padding: gutter-maker($accordion-title-padding);
+		margin-top: $accordion-gutter;
+        svg.iconic.iconic-sm {
+            width: 10px !important;
+            height: 10px !important;
+            margin: 0 10px;
+            .iconic-property-fill {
+                fill:$accordion-title-font-color;
+            }
+        }
+        
+		&:hover {
+			cursor:pointer;
+		}
+	}
+	dd {
+		@extend p;
+		display: none;
+	}
+}

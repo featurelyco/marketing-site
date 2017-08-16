@@ -1,0 +1,253 @@
+// Navigation
+header {
+	background: $header-bg;
+	z-index: 1000;
+	&.top {
+		position:absolute;
+		top:0;
+		width: 100%;
+		height: $header-height;
+	}
+	&.fixed {
+		position:fixed;
+		top:0;
+		width: 100%;
+		height: $header-height;
+	}
+	
+	.clm {
+		padding:0;
+	}
+	h1 {
+		display: inline-block;
+		height: $nav-height;
+		margin-bottom:0;
+		width: 100%;
+		a {
+			padding:$nav-padding;
+			display: block;
+			height: $nav-height;
+		}
+	}
+	nav.inline {
+		float:$nav-direction;
+		display: inline-block;
+        background: $nav-bg;
+		.off-canvas {
+			display: none;
+		}
+		ul {
+			list-style-type: none;
+			&.divider {
+				li {
+					border-left:1px solid $divider-color;
+					width: auto;
+					margin-right:-4px;
+					&:hover {
+						background: $nav-hover-bg;
+					}
+				}
+			}
+			li {
+				display: inline-block;
+				height: auto;
+				position:relative;
+				&:hover {
+					background: $nav-hover-bg;
+				}
+				a {
+					padding: (($nav-height - $nav-font-size)/2) $nav-padding;
+					font-size: $nav-font-size;
+                 	     font-family:$nav-font-family;
+					line-height: 1em;
+					display: block;
+					color:$nav-color;
+					&:hover {
+						color: $nav-hover-color;
+					}
+				}
+				&.drop {
+					a {
+						padding: (($nav-height - $nav-font-size)/2) $nav-padding + 10px (($nav-height - $nav-font-size)/2) $nav-padding;
+						font-size: $nav-font-size;
+						line-height: 1em;
+						color:$nav-color;
+						&::after {
+							content: "";
+							display: block;
+							width: 0;
+							height: 0;
+							position:absolute;
+							top:($nav-height/2 - 1px);
+							right:10px;
+							border: inset 4px;
+							border-color: $drop-marker-color transparent transparent transparent;
+							border-top-style: solid;
+						}
+					}
+					&:hover {
+						a {
+							color:$nav-hover-color;
+							&::after {
+								content: "";
+								display: block;
+								width: 0;
+								height: 0;
+								position:absolute;
+								top:($nav-height/2 - 1px);
+								right:10px;
+								border: inset 4px;
+								border-color: $nav-hover-color transparent transparent transparent;
+								border-top-style: solid;
+							}
+						}
+						ul.drop-menu {
+							display: block;
+							background: $header-bg;
+							position: absolute;
+							right:0;
+							left:auto;
+							top: $nav-height;
+							min-width: 100%;
+							overflow: visible;
+							li {
+								display: list-item;
+								width: 100%;
+								position:relative;
+								a {
+									display: block;
+									width: 100%;
+									white-space: nowrap;
+									color:$nav-color;
+									&::after {
+										border:0;
+									}
+									&:hover {
+										color:$nav-hover-color;
+									}
+								}
+							}
+						}
+					}
+					ul.drop-menu {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+// goto off canvas on small
+@media (max-width: $nav-break-point) {
+	header {
+		background: $header-bg;
+		z-index: 1000;
+		nav.inline, nav.mega-menu {
+			float:$nav-direction;
+			display: block;
+			background: $tuatara;
+			.off-canvas {
+				display: block;
+				height: $nav-height;
+				padding-top: (($nav-height - $small-button-size)/2);
+				padding-bottom: (($nav-height - $small-button-size)/2);
+			}
+			ul {
+				list-style-type: none;
+				background: $tuatara;
+				min-height: 100vh;
+				width: $off-canvas-width;
+				position:absolute;
+                	overflow:scroll;
+				top:$nav-height;
+				
+				@if $off-canvas-side == left {
+					left: ($off-canvas-width * -1);
+				} @else {
+					right: ($off-canvas-width * -1);
+				}
+				@include transition(.35s);
+				li {
+					display: block;
+					a {
+						color: $off-canvas-link-color;
+					}
+				}
+			}
+			.off-canvas.open + ul {
+				list-style-type: none;
+				background: $off-canvas-bg;
+				min-height: 100vh;
+				height: 100%;
+				position:absolute;
+				overflow:scroll;
+				@if $off-canvas-side == left {
+					left: 0;
+				} @else {
+					right: 0;
+				}
+				top:0;
+				margin-top: $nav-height;
+				padding-bottom: $nav-height;
+				li {
+					display: list-item;
+					border:none;
+					position: relative;
+					a {
+						color: $off-canvas-link-color;
+						padding:$nav-padding;
+					}
+				}
+				li.drop, li.drop:hover {
+					ul.drop-menu {
+						display: none;
+						position:relative;
+						background: $off-canvas-drop-bg-color;
+						overflow:scroll;
+						a {
+							color: $off-canvas-drop-link-color;
+							&::after {
+								border:none;
+							}
+						}
+					}
+					&.drop-open {
+						ul.drop-menu {
+							display: block;
+							height: auto;
+							position:static;
+							background: $off-canvas-drop-bg-color;
+							height:110%;
+							min-height:100%;
+							li {
+								display: list-item;
+								position:relative;
+								a {
+									color: $off-canvas-drop-link-color;
+									&:hover {
+										color: $off-canvas-drop-link-color-hover;
+									}
+									&::after {
+										border:none;
+									}
+								}
+							}
+						}
+					}
+				} 
+			}
+		} 
+	}	
+}
+
+// Modal BG to close
+.off-canvas-bg {
+	z-index: 999;
+	width: 100vw;
+	height: 100vh;
+	background: rgba($black,0.5);
+	position:fixed;
+	top:0;
+	right:0;
+}

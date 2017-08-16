@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="7px" viewBox="0 0 23 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>slider-arrows</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Step2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1" transform="translate(-780.000000, -411.000000)" fill="#000000">
+            <g id="Group-4-Copy-2" transform="translate(566.000000, 406.000000)">
+                <g id="Group-6" transform="translate(209.000000, 0.000000)">
+                    <g id="slider-arrows" transform="translate(5.000000, 5.000000)">
+                        <polygon id="Shape" fill-opacity="0.2" points="0.599166667 2.884875 0 3.5 0.599166667 4.115125 3.33375 7 5.70375 7 5.65166667 6.9453125 2.3575 3.5 5.69083333 0 3.34708333 0"></polygon>
+                        <polygon id="Shape" fill-opacity="0.220674819" points="17.0004367 3.88578059e-16 17.0550186 0.0546875 20.5072146 3.5 17.013973 7 19.4701585 7 22.3494628 4.115125 22.977373 3.5 22.3494628 2.884875 19.4836948 0 17 0"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

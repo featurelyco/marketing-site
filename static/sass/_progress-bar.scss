@@ -1,0 +1,63 @@
+// Progress bar
+.progress-bar.bar {
+	height: $progress-height;
+	width: 100%;
+	background: $progress-bg;
+	border:$progress-border-width solid $progress-border-color;
+	box-sizing: content-box;
+	&.round {
+		border-radius: 1000px;
+		height:$progress-height;
+		.complete {
+			background: $progress-complete-color;
+			height: $progress-height;
+			border-top-left-radius: 1000px;
+			border-bottom-left-radius: 1000px;
+		}
+	}
+	.tick-marks {
+		height: $progress-tick-height;
+		width: 100%;
+		display: block;
+		margin-left: $progress-tick-alignment;
+		margin-top: $progress-border-width;
+		background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="1px" viewBox="0 0 10 1" enable-background="new 0 0 10 1" xml:space="preserve"><rect x="9" fill="#{$progress-tick-color}" width=".1" height="1"/></svg>');
+		background-repeat:repeat;
+		background-size: 10%;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	.complete {
+		background: $progress-complete-color;
+		height: $progress-height;
+	}
+}
+
+// Progress Donut
+.progress-bar.donut {
+    display: block;
+    margin: 0 auto;
+    position:relative;
+    h2 {
+        text-align:center;
+        position: absolute;
+        line-height: 1em;
+        width: 100%;
+        margin-top: 2.25rem;
+    }
+    svg {
+        margin:0 auto;
+        display: block;
+        transform: rotate(-89.9deg);
+    }
+    .rail {
+        stroke:$progress-donut-bg;
+    }
+    .circle-animation {
+        stroke:$progress-donut-complete-color;
+        stroke-dasharray: 440;
+        stroke-dashoffset: 440;
+        -webkit-animation: donut 1s ease-out forwards;
+        animation: donut 1s ease-out forwards;
+    }
+}

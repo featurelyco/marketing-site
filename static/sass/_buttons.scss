@@ -1,0 +1,220 @@
+// buttons make the internet happen
+.button, button {
+	@extend a;
+	display: inline-block;
+	padding: $medium-button-size/2 $medium-button-size;
+	font-size: $medium-button-size;
+	font-family: $button-font;
+	color: $button-text-color;
+	text-align: left;
+	background: $button-color;
+	box-shadow: 0 4px 0 0 darken($button-color,10%);
+	@include transition;
+	border-radius:$button-radius;
+	flex-direction: column;
+	&:hover {
+		color: $button-text-color;
+		background: tint($button-color,5%);
+		cursor:pointer;
+	}
+	// Sizes
+	&.humongous-big {
+		font-size: $humongous-big-button-size;
+		padding: $humongous-big-button-size $humongous-big-button-size*2;
+		&.icon {
+			padding-left: 0;
+			svg {
+				margin: 0.25em 1.5em 0 1.5em;
+				&.iconic * {
+					fill:$button-text-color;
+					stroke:$button-text-color;
+				}
+			}
+		}
+	}
+	&.large {
+		font-size: $large-button-size;
+		padding: $large-button-size $large-button-size*2;
+		&.icon {
+			padding-left: 0;
+			svg {
+				margin: 0.25em 1.5em 0 1.5em;
+				&.iconic * {
+					fill:$button-text-color;
+					stroke:$button-text-color;
+				}
+			}
+		}
+	}
+	&.medium {
+		font-size: $medium-button-size;
+		padding: $medium-button-size $medium-button-size*2;
+		&.icon {
+			padding-left: 0;
+			svg {
+				margin: 0.25em 1.5em -0.25em 1.5em;
+				&.iconic * {
+					fill:$button-text-color;
+					stroke:$button-text-color;
+				}
+			}
+		}
+	}
+	&.small {
+		font-size: $small-button-size;
+		padding: $small-button-size/3 $small-button-size*2;
+		&.icon {
+			padding-left: 0;
+			svg {
+				margin: 0.25em 1.5em -0.35em 1.5em;
+				&.iconic * {
+					fill:$button-text-color;
+					stroke:$button-text-color;
+				}
+			}
+		}
+	}
+	&.fill {
+		width: 100%;
+	}
+
+	// Colors
+	&.action {
+		@if $button-style == gradient {
+			background-image: -webkit-linear-gradient($action-color 0%, tint($action-color, 5%) 100%);
+			background-image: -o-linear-gradient($action-color 0%, tint($action-color, 5%) 100%);
+			background-image: linear-gradient($action-color 0%, tint($action-color, 5%) 100%);
+		}
+		@else if $button-style == flat {
+			background-color:$action-color;
+			box-shadow: 0 4px 0 0 darken($action-color,10%);
+		}
+		background-position: 0px;
+		@include transition;
+		&:hover {
+			@if $button-style == gradient {
+				background-image: -webkit-linear-gradient(tint($action-color, 5%) 0%, tint($action-color, 10%) 100%);
+				background-image: -o-linear-gradient(tint($action-color, 5%) 0%, tint($action-color, 10%) 100%);
+				background-image: linear-gradient(tint($action-color, 5%) 0%, tint($action-color, 10%) 100%);
+			}
+			@else if $button-style == flat {
+				background-color:tint($action-color, 10%);
+			}
+		}
+		&:active {
+			margin-top: rem-me(4);
+			box-shadow: none;
+		}
+	}
+
+	&.secondary-action {
+		@if $button-style == gradient {
+			background-image: -webkit-linear-gradient($secondary-action-color 0%, tint($secondary-action-color, 5%) 100%);
+			background-image: -o-linear-gradient($secondary-action-color 0%, tint($secondary-action-color, 5%) 100%);
+			background-image: linear-gradient($secondary-action-color 0%, tint($secondary-action-color, 5%) 100%);
+		}
+		@else if $button-style == flat {
+			background-color:$secondary-action-color;
+			box-shadow: 0 4px 0 0 darken($secondary-action-color,10%);
+		}
+		background-position: 0px;
+		@include transition;
+		&:hover {
+			@if $button-style == gradient {
+				background-image: -webkit-linear-gradient(tint($secondary-action-color, 5%) 0%, tint($secondary-action-color, 10%) 100%);
+				background-image: -o-linear-gradient(tint($secondary-action-color, 5%) 0%, tint($secondary-action-color, 10%) 100%);
+				background-image: linear-gradient(tint($secondary-action-color, 5%) 0%, tint($secondary-action-color, 10%) 100%);
+			}
+			@else if $button-style == flat {
+				background-color:tint($secondary-action-color, 10%);
+			}
+
+		}
+	}
+
+	&.info {
+		@if $button-style == gradient {
+			background-image: -webkit-linear-gradient($info-color 0%, tint($info-color, 5%) 100%);
+			background-image: -o-linear-gradient($info-color 0%, tint($info-color, 5%) 100%);
+			background-image: linear-gradient($info-color 0%, tint($info-color, 5%) 100%);
+		}
+		@else if $button-style == flat {
+			background-color:$info-color;
+			box-shadow: 0 4px 0 0 darken($info-color,10%);
+		}
+		background-position: 0px;
+		@include transition;
+		&:hover {
+			@if $button-style == gradient {
+				background-image: -webkit-linear-gradient(tint($info-color, 5%) 0%, tint($info-color, 10%) 100%);
+				background-image: -o-linear-gradient(tint($info-color, 5%) 0%, tint($info-color, 10%) 100%);
+				background-image: linear-gradient(tint($info-color, 5%) 0%, tint($info-color, 10%) 100%);
+			}
+			@else if $button-style == flat {
+				background-color:tint($info-color, 10%);
+			}
+
+		}
+	}
+
+	&.success {
+		@if $button-style == gradient {
+			background-image: -webkit-linear-gradient($success-color 0%, tint($success-color, 5%) 100%);
+			background-image: -o-linear-gradient($success-color 0%, tint($success-color, 5%) 100%);
+			background-image: linear-gradient($success-color 0%, tint($success-color, 5%) 100%);
+		}
+		@else if $button-style == flat {
+			background-color:$success-color;
+			box-shadow: 0 4px 0 0 darken($success-color,10%);
+		}
+		background-position: 0px;
+		@include transition;
+		&:hover {
+			@if $button-style == gradient {
+				background-image: -webkit-linear-gradient(tint($success-color, 5%) 0%, tint($success-color, 10%) 100%);
+				background-image: -o-linear-gradient(tint($success-color, 5%) 0%, tint($success-color, 10%) 100%);
+				background-image: linear-gradient(tint($success-color, 5%) 0%, tint($success-color, 10%) 100%);
+			}
+			@else if $button-style == flat {
+				background-color:tint($success-color, 10%);
+			}
+
+		}
+	}
+
+	&.error {
+		@if $button-style == gradient {
+			background-image: -webkit-linear-gradient($error-color 0%, tint($error-color, 5%) 100%);
+			background-image: -o-linear-gradient($error-color 0%, tint($error-color, 5%) 100%);
+			background-image: linear-gradient($error-color 0%, tint($error-color, 5%) 100%);
+		}
+		@else if $button-style == flat {
+			background-color:$error-color;
+			box-shadow: 0 4px 0 0 darken($error-color,10%);
+		}
+		background-position: 0px;
+		@include transition;
+		&:hover {
+			@if $button-style == gradient {
+				background-image: -webkit-linear-gradient(tint($error-color, 5%) 0%, tint($error-color, 10%) 100%);
+				background-image: -o-linear-gradient(tint($error-color, 5%) 0%, tint($error-color, 10%) 100%);
+				background-image: linear-gradient(tint($error-color, 5%) 0%, tint($error-color, 10%) 100%);
+			}
+			@else if $button-style == flat {
+				background-color:tint($error-color, 10%);
+			}
+
+		}
+	}
+	&.disabled {
+		background: $disabled-color;
+		color: darken($disabled-color, 20%);
+		box-shadow: 0 4px 0 0 darken($disabled-color,10%);
+		&:hover {
+			text-decoration: none;
+			background: $disabled-color;
+			color: darken($disabled-color, 20%);
+			cursor:default;
+		}
+	}
+}

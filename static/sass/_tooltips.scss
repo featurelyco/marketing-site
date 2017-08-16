@@ -1,0 +1,45 @@
+// Tooltips
+.tooltip {
+	color:$tooltip-span-color;
+	font-style: $tooltip-span-font-style;
+	position: relative;
+	cursor: help;
+}
+.this-tip {
+	background:$tooltip-tip-bg;
+	color:$tooltip-tip-color;
+	font-size: $tooltip-tip-font-size;
+	display: block;
+	position: absolute;
+	top:2.5em;
+	width: $tooltip-tip-width;
+	padding:0.75rem;
+	text-align: left;
+	z-index: 1000;
+	border:none;
+	&::before {
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		position:absolute;
+		background-color:none;
+		top: ($tooltip-tip-tail-size * -2);
+		border: inset $tooltip-tip-tail-size;
+		border-color: transparent transparent $tooltip-tip-bg transparent;
+		border-top-style: solid;
+	}
+}
+
+@media (max-width: $small-breakpoint) {
+	.tooltip {
+		position: static;
+	}
+	.this-tip{
+		width: 95%;
+		left:2.5%;
+		&::before {
+			left:45%;
+		}
+	}
+}

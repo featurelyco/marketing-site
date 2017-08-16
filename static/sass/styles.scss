@@ -1,0 +1,325 @@
+// This value controls all of the rem values in the project.  Change it wisely...
+$base-font-size:16px;
+@import "reset";
+@import "functions";
+@import "mixins";
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed|Satisfy');
+// breakpoint variable between stylesheets
+$large-breakpoint: rem-me(1140);
+$medium-breakpoint: rem-me(900);
+$small-breakpoint: rem-me(700);
+$gutter: 40px;
+@import "settings";
+@import "flexbox";
+@import "iconic";
+@import "typography";
+@import "nav";
+@import "alerts";
+@import "buttons";
+@import "forms";
+@import "modals";
+@import "panel";
+@import "tables";
+@import "tabs";
+@import "pricing-tables";
+@import "progress-bar";
+@import "tooltips";
+@import "slider";
+@import "utility-classes";
+
+// Things for everywhere
+body {
+	background: #E3F4FF;
+}
+span.brand-font {
+	font-family: $brand-font;
+	color: $red;
+}
+
+// stright styles homie
+section.hero {
+	background: url('/static/images/current-hero.jpg') no-repeat center center;
+	background-size: cover;
+	h1 {
+		@include image-replacement;
+		background-image: url('/static/images/logo-horiz.svg');
+		height: rem-me(131);
+		background-repeat: no-repeat;
+		margin-top: rem-me(90);
+	}
+	h2 {
+		font-family: $sans-serif;
+		font-size: rem-me(44);
+		color: #424D5D;
+		letter-spacing: 0;
+		.iconic-thumb .iconic-thumbs-up .iconic-property-fill{
+			fill:$green;
+		}
+	}
+	.what-is-this {
+		margin-top: rem-me(150);
+		padding-bottom: rem-me(200);
+		background: image-url('product-shot.png') no-repeat 100% top;		
+		background-size: 50%;
+		z-index: 100;
+		position: relative;
+		h3 {
+			font-family: $sans-serif;
+			font-weight: 600;
+			font-size: rem-me(48);
+			color: $green;
+		}
+		p {
+			font-size: rem-me(20);
+			color: $gray;
+		}
+		ul li {
+			font-size: rem-me(20);
+			margin: rem-me(7) 0;
+			color: $green;
+			& span.text {
+				color: $gray;
+			}
+		}
+	}
+}
+
+// What's so great about featurely
+section.features {
+	background: url('/static/images/great-bg-top.svg') no-repeat center top, url('/static/images/great-bg-bottom.svg') no-repeat center bottom;
+	background-size: cover;
+	padding-top: rem-me(150);
+	margin-top: rem-me(-240);
+	padding-bottom: rem-me(150);
+	
+	h4 {
+		font-family: $sans-serif;
+		font-size: rem-me(48);
+		color: #C4FFF3;
+		font-weight: 600;
+		letter-spacing: 0;
+		small {
+			font-size: rem-me(36);
+			color: #134B71;
+			font-weight: 400;
+			display: block;
+			margin-top: 1.75rem;
+		}
+	}
+	h5 {
+		font-size: rem-me(30);
+		color: #134C71;
+		// I can haz all your icons
+		.iconic {
+			margin-right: 1rem;
+			&.iconic-heart .iconic-property-fill{
+				fill:$red;
+			}
+			&.iconic-magic-wand {
+				.iconic-magic-wand-ray-major {
+					stroke:$red;
+				}
+				.iconic-magic-wand-ray-minor {
+					stroke:$yellow;
+				}
+				// how am i supposed to not laugh at this?
+				.iconic-magic-wand-shaft-tip {
+					fill:$yellow;
+				}
+			}
+			.iconic-connections-dot-center {
+				fill:$red;
+			}
+			.iconic-connections-dot-left {
+				fill:#8BD1FF;
+			}
+			.iconic-connections-dot-top-right {
+				fill:$yellow;
+			}
+			.iconic-connections-dot-bottom-right {
+				fill:#134C71;
+			}
+			&.iconic-palette .iconic-property-fill {
+				fill:$yellow;
+			}
+			.iconic-bullhorn-body-back, .iconic-bullhorn-body-front-lip {
+				fill:$red;
+			}
+			.iconic-map-map-marker {
+				fill:$red;
+			}
+			.iconic-map-street {
+				stroke:$gray;
+			}
+		}
+	}
+	p {
+		font-weight: 500;
+		font-size: rem-me(21);
+		color: #C4FFF2;
+	}
+}
+
+section.call-out {
+	padding: rem-me(50) 0;
+	p {
+		font-size: 36px;
+		text-align: right;
+		letter-spacing: 0;
+		margin-top: rem-me(20);
+	}
+}
+
+section.testimonials {
+	background: url('/static/images/testimonails-bg-top.svg') no-repeat center top, url('/static/images/testimonails-bg-bottom.svg') no-repeat center bottom;
+	background-size: cover;
+	padding: rem-me(100) 0  rem-me(200);
+	z-index: 2;
+	position: relative;
+	h6 {
+		font-weight: 600;
+		font-size: rem-me(36);
+		letter-spacing: 0;
+	}
+	.panel {
+		border-radius: $global-radius;
+		padding: rem-me(50);
+		position: relative;
+		blockquote {
+			border:none;
+			padding:0;
+			font-family: $sans-serif;
+			font-size: rem-me(20);
+			margin-bottom: 1rem;
+		}
+		p {
+			font-size: rem-me(20);
+			margin-bottom: 6rem;
+			small {
+				font-size: rem-me(16);
+				color: #646464;
+				margin-left: rem-me(5);
+				display: block;
+			}
+		}
+		img {
+			border-radius: 50%;
+			border:10px solid $blue;
+			position:absolute;
+			left:rem-me(-10);
+			bottom:rem-me(-75);
+		}
+		a {
+			position: absolute;
+			right: 50px;
+		}
+	}
+}
+
+section.pricing {
+	background: $gray;
+	z-index: 1;
+	margin-top: rem-me(-200);
+	padding-top: rem-me(250);
+	padding-bottom: rem-me(100);
+	position: relative;
+	h6 {
+		font-size: rem-me(36);
+		color: #99C4EC;
+	}
+	.pricing-table {
+		border:none;
+		position: relative;
+		.title {
+			padding:rem-me(24);
+			font-weight: 500;
+		}
+		.get-it {
+			padding: 2rem 4rem;
+		}
+		&.startup {
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+			z-index: 5;
+			margin-top: 1rem;
+			.title {
+				border-top-left-radius: 20px;
+				background: $green;
+				color:#4CFFD9;
+			}
+			.price {
+				color: $green;
+			}
+			.get-it {
+				a {
+					font-size: rem-me(22);
+				}
+			}
+		}
+		&.series-b {
+			border-radius: 20px;
+			border-bottom-left-radius: 20px;
+			z-index: 10;
+			@include shadow();
+			.title {
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+				padding: rem-me(30);
+				background: $red;
+				color:#FFBDB5;
+			}
+			.price {
+				color: $red;
+			}
+			.get-it {
+				padding-top: 2.25rem;
+				padding-bottom: 2.25rem;
+			}
+		}
+		&.ipo {
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			z-index: 6;
+			margin-top: 1rem;
+			.title {
+				border-top-right-radius: 20px;
+				background: $yellow;
+				color:#FFD89F;
+			}
+			.price {
+				color: $yellow;
+			}
+			.get-it {
+				a {
+					font-size: rem-me(22);
+				}
+			}
+		}
+	}
+}
+
+section.contact {
+	background: $snow;
+	padding: 4rem 0;
+	h6 {
+		font-weight: 600;
+		font-size: rem-me(36);
+	}
+	p {
+		font-size: rem-me(20);
+		line-height: 1.75rem;
+	}
+}
+
+footer {
+	background: $red;
+	padding: 10rem 0;
+	p, a {
+		font-size: rem-me(22);
+		font-weight: 500;
+		color: #792B22;
+	}
+	p {
+		margin-top: 4rem;
+	}
+}

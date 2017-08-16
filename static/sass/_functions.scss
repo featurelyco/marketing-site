@@ -1,0 +1,29 @@
+// simple way to remove the units from any variable
+@function strip-units($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+// rem unit calculator based on a pixel variable
+@function rem-me($calc) {
+	$base: strip-units($base-font-size);
+	@return strip-units($calc) / $base + rem;
+}
+
+// grid-calc because calculating percentages is a pain in the ass
+@function grid-calc($grid) {
+	@return (100 / 12) * $grid * 1%;
+}
+
+// block-grid-calc because calculating percentages is a pain in the ass
+@function block-grid-calc($grid) {
+	@return (100 / $grid) * 1%;
+}
+
+// do some basic division that I can't seem to get sass to do inline
+@function gutter-maker($gutter) {
+	@return $gutter / 2;
+}
+
+@function do-math-divide($big-number, $small-number) {
+	@return rem-me(strip-units($big-number) / strip-units($small-number));
+}

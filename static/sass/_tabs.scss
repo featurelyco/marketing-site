@@ -1,0 +1,27 @@
+// Tabs
+ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    background: $tab-bar-bg;
+    li {
+        background: $tabs-bg;
+        color: $tabs-color;
+        display: inline-block;
+        padding: $tabs-tab-padding;
+        cursor: pointer;
+        &.current{
+            background: $tabs-bg-active;
+            color: $tabs-active-color;
+        }
+    }
+}
+
+.tab-content{
+    display: none;
+    background: $tabs-content-bg;
+    padding: 15px;
+    &.current{
+        display: inherit;
+    }
+}

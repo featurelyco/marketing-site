@@ -1,0 +1,599 @@
+// FORMS ARE SUPER IMPORTANT! SERIOUSLY YOU GUYS!!
+form {
+	position: relative;
+}
+textarea, input, select { 
+	outline: none;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"] {
+	@if $label-style == inner {
+		background:rgba(0,0,0,0);
+		border:none;
+		margin-top:$input-height * -1;
+		padding-top: $input-height / 3px * 1px;
+	} @else {
+		background:$input-bg;
+		border:1px solid $input-border-color;
+	}
+	padding-left: $input-height / 3px * 1px;
+	border-radius: $global-radius;
+	height:$input-height;
+	display: block;
+	width: 100%;
+	outline:none;
+	font-family: $body-copy-font-family;
+	font-size: $input-font-size;
+	@include transition;
+	&:focus:not(.spin) {
+		@if $label-style == inner {
+			height:$input-focus-height;
+			margin-top:$input-focus-height * -1;
+		}
+		
+		& + small.error {
+			background: $primary;
+		}
+	}
+	&:disabled, &:read-only {
+		background: rgba(0,0,0,0);
+		color: darken($disabled-color, 20%);
+     }
+	&.error {
+	}
+	&.valid {
+		box-shadow:none;
+		border:none;
+		padding-left: $input-height / 3px * 1px;
+	}
+// damn you firefox
+	&::-moz-focus-outer {
+    		border: 0;
+	}
+}
+
+label:not(.button-radio):not(.inline) {
+	@if $label-style == inner {
+		background: $input-bg;
+		border: 1px solid $input-border-color;
+		height:$input-height;
+		padding-top: $input-height / 3px * 1px;
+		padding-right: $input-height / 3px * 1px;
+		padding-bottom: $input-height / 3px * 1px;
+		padding-left: $input-height / 2.5px * 1px;
+		border-radius: $global-radius;
+	} @else {
+		margin-bottom: $label-font-size / 2 * 1;
+	}
+	width: 100%;
+	display: block;
+	font-size: $label-font-size;
+	font-family: $body-copy-font-family;
+	color: $label-font-color;
+	line-height: 1rem;
+	@include transition;
+	&.complete:not(.spin) {
+		@if $label-style == inner {
+			background: $input-complete-bg;
+			border: 1px solid $input-border-complete-color;
+			padding:5px 0 0 ($input-height / 3px * 1px);
+		}
+		font-size: $label-font-size;
+		color: $label-complete-font-color;
+	}
+	&.disabled {
+		@if $label-style == inner {
+			background: $disabled-color;
+		} @else {
+			background: transparent;
+		}
+		color:darken($disabled-color, 20%);
+		&.complete:not(.spin) {
+			@if $label-style == inner {
+				padding:5px 0 0 ($input-height / 3px * 1px);
+				background: $disabled-color;
+			}
+			font-size: $label-font-size;
+		}
+	}
+	&.error {
+		@if $label-style == inner {
+			background: white;
+			border-bottom-left-radius:0px;
+			border-bottom-right-radius:0px;
+			padding:5px 0 0 ($input-height / 3px * 1px);
+			border:1px solid $error;
+		}
+		color:$error;
+	}
+	&.focused:not(.spin) {
+		@if $label-style == inner {
+			background: $input-focus-bg;
+			padding:5px 0 0 ($input-height / 3px * 1px);
+			border: 1px solid $input-border-focus-color;
+			height:$input-focus-height;
+			@include shadow;
+		}
+		font-size: 12px;
+		color: $label-focus-font-color;
+	}
+}
+
+select {
+	@if $label-style == inner {
+		position:absolute;
+		top:0;
+		right: gutter-maker($gutter);
+		left: gutter-maker($gutter);
+		outline:none;
+		margin-bottom: gutter-maker($gutter);
+		background:rgba(0,0,0,0);
+		border:none;
+		padding-top: $input-height / 3px * 1px;
+		width: calc(100% - 30px);
+	} @else {
+		background:$input-bg;
+		border:1px solid $input-border-color;
+		width: 100%;
+	}
+	-webkit-appearance: none !important;
+	-moz-appearance: none;
+	border-radius: $global-radius;
+	height:$input-height;	
+	padding-left: $input-height / 3px * 1px;
+	font-size: $input-font-size;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+	background-position: 95% center;
+	background-repeat: no-repeat;
+	&::-ms-expand {
+		display: none;
+	}
+	&:focus {
+		border-color:$input-border-focus-color;
+		@if $label-style == inner {
+			height:$input-focus-height;
+		}
+		& + small.error {
+			background: $primary;
+		}
+		&::-ms-value {
+			background-color: transparent;
+			color:$input-font-color;
+		}
+	}
+	&.error {
+//		border:1px solid $error;
+//		border-bottom-left-radius:0px;
+//		border-bottom-right-radius:0px;
+		& + small.error {
+			color:$white;
+			background: $error;
+			width: 100%;
+			padding:5px 10px;
+			border-bottom-left-radius:$global-radius;
+			border-bottom-right-radius:$global-radius;
+		}
+	}
+	&:disabled {
+		@if $label-style == inner {
+			background: rgba(0,0,0,0);
+			
+		} @else {
+			background: $disabled-color;
+		}
+		color: darken($disabled-color, 20%);
+	}
+	&.valid {
+		padding-left: $input-height / 3px * 1px;
+	}
+// Damn you firefox
+	&:-moz-focusring {
+    		color: transparent;
+    		text-shadow: 0 0 0 #000;
+	}
+}
+
+// Error styles
+small.error {
+//	margin-top: $input-height * -1;
+	color:$white;
+	background: $error;
+	width: 100%;
+	display: block;
+	padding:5px 10px;
+	border-bottom-left-radius:$global-radius;
+	border-bottom-right-radius:$global-radius;
+}
+
+// Radio and checkboxes get different error styles
+.error-here {
+	small {
+		border-radius:$global-radius;
+	}
+}
+
+// button-y radios	
+input[type=radio], input[type=checkbox] {
+	z-index: 0;
+	opacity: 0;
+	height: 1px;
+	width: 1px;
+	position: absolute;
+	& + label.button-radio {
+		position: relative;
+		font-size: $label-font-size;
+		line-height: 1.5em;
+	}
+	&:disabled + label.button-radio {
+		background: $gainsboro;
+		color:$jumbo;
+		&:hover {
+			text-decoration: none;
+			cursor: default;
+		}
+	}
+}
+
+label.inline {
+	display:inline-block;
+	font-family: $brand-font;
+	font-size: $body-copy-font-size;
+	&:hover {
+		cursor:pointer;
+	}
+	input[type=radio], input[type=checkbox] {
+		z-index: 1;
+		opacity: 1;
+		height: auto;
+		width: auto;
+		position: relative;
+		&:hover {
+			cursor:pointer;
+		}
+	}
+}
+
+
+label.button-radio {
+	height: $input-height;
+	padding: ($input-height / 3.25px * 1px) ($input-height / 1.75px * 1px);
+}
+
+input[type=radio]:checked + label.button-radio,
+input[type=radio].disabled:checked + label.button-radio.disabled,
+input[type=checkbox]:checked + label.button-radio,
+input[type=checkbox].disabled:checked + label.button-radio.disabled{
+	background: darken($button-color, 20%);
+	color:$button-text-color;
+	&:before {
+		font-family: 'Iconic';
+		display: inline-block;
+		speak: none;
+		line-height: 1;
+		vertical-align: baseline;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 12px;
+		position: absolute;
+		top: $input-focus-height / 2.5;
+		left: 10px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: '\e159';
+	}
+}
+
+button {
+	border:none;
+}
+
+// placeholders cna do stuff too
+::-webkit-input-placeholder {
+	font-size: do-math-divide($input-height,3);
+	color: $input-placeholder-color;
+	text-align: $input-placeholder-text-align;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	font-size: do-math-divide($input-height,3);
+	color: $input-placeholder-color;
+	text-align: $input-placeholder-text-align;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	font-size: do-math-divide($input-height,3);
+	color: $input-placeholder-color;
+	text-align: $input-placeholder-text-align;
+}
+
+:-ms-input-placeholder {  
+	font-size: do-math-divide($input-height,3);
+	color: $input-placeholder-color;
+	text-align: $input-placeholder-text-align;
+}
+
+// Range Slider Badassness
+.range-slider {
+	margin-bottom: 1rem;
+	// Slider
+	input[type="range"] {
+		-webkit-appearance: none;
+		width: 100%;
+		height: $range-track-height;
+		border-radius: 5px;
+//		background:$range-default-track-bg;
+		background: linear-gradient(to right, $range-active-track-bg 0%, $range-active-track-bg 50%, $range-default-track-bg 50%, $range-default-track-bg 100%);
+		background-size: 200% 100%;
+		background-position: 50% center;
+		border:1px solid $range-track-border-color;
+		box-shadow:inset 1px 1px 0px $white, inset -1px -1px 0px $white;
+		outline: none;
+		box-sizing:content-box;
+		&::-moz-range-track {
+			-moz-appearance: none;
+		}
+		
+		// Webkit styles
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			width: $range-handle-width;
+			height: $range-handle-height;
+			border-radius: $range-handle-border-radius;
+			border:1px solid $range-handle-border-color;
+			background: $range-handle-color image-url('slider-arrows.svg') no-repeat center center;
+			cursor: pointer;
+			@include transition;
+			&:hover {
+				background: $range-handle-color-active image-url('slider-arrows.svg') no-repeat center center;
+			}
+		}
+
+		&:active::-webkit-slider-thumb {
+			background: $range-handle-color-active image-url('slider-arrows.svg') no-repeat center center;
+		}
+
+		// firefox styles
+		&::-moz-range-thumb {
+			width: $range-handle-width;
+			height: $range-handle-height;
+			border-radius: $range-handle-border-radius;
+			border:1px solid $range-handle-border-color;
+			background: $range-handle-color image-url('slider-arrows.svg') no-repeat center center;
+			cursor: pointer;
+			@include transition;
+
+			&:hover {
+				background: $range-handle-color-active image-url('slider-arrows.svg') no-repeat center center;
+			}
+		}
+		&::-moz-range-progress {
+			background-color: $range-active-track-bg;
+		}
+		&:active::-moz-range-thumb {
+			background: $range-handle-color-active image-url('slider-arrows.svg') no-repeat center center;
+		}
+		
+		// IE specific styles
+		&::-ms-fill-lower { // controls styling of the sliders track before the slider thumb
+//			background: $range-active-track-bg;
+		} 
+		&::-ms-fill-upper { // same as above, but after the thumb
+//			background: $range-default-track-bg;
+		}
+		&::-ms-thumb { // for the slider thumb itself.
+			width: $range-handle-width;
+			height: $range-handle-height;
+			border-radius: $range-handle-border-radius;
+			background: $range-handle-color image-url('slider-arrows.svg') no-repeat center center;
+			cursor: pointer;
+		}
+		&::-ms-tooltip {
+    			display: none;
+		}		
+//		&::-ms-track { // styles the sliders individual tracks.
+//			width: 100%;
+//			height: $range-track-height;
+//			border-radius: 5px;
+//			background: $range-default-track-bg;
+//			outline: none;
+//		}
+// damn you firefox
+		&::-moz-focus-outer {
+    			border: 0;
+		}
+		&:disabled {
+			background: linear-gradient(to right, $disabled-color 0%, $disabled-color 50%, $range-default-track-bg 50%, $range-default-track-bg 100%);
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				width: $range-handle-width;
+				height: $range-handle-height;
+				border-radius: $range-handle-border-radius;
+				border:1px solid darken($disabled-color, 10%);
+				background: $disabled-color image-url('slider-arrows.svg') no-repeat center center;
+				cursor: pointer;
+				@include transition;
+				&:hover {
+					background: $disabled-color image-url('slider-arrows.svg') no-repeat center center;
+				}
+			}
+		}
+	}
+	// Tooltip Tag
+	output {
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		width: $range-output-width;
+		color: $range-output-color;
+		font-size: $range-output-size;
+		line-height: 20px;
+		border-radius: $range-output-border-radius;
+		background: $range-output-bg;
+		padding: 5px 10px;
+		font-family: $sans-serif;
+		//    &:before {
+		//      position: absolute;
+		//      top: 8px;
+		//      right: -7px;
+		//      width: 0;
+		//      height: 0;
+		//      border-top: 7px solid transparent;
+		//      border-left: 7px solid #353535;
+		//      border-bottom: 7px solid transparent;
+		//      content: '';
+		//    }
+	}
+}
+
+// Firefox Overrides
+::-moz-range-track {
+    background: $range-default-track-bg;
+    border: 0;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+//  goodbye spinners on number inputs
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+#age, #which_insurance {
+	height: 1px !important;
+	width: 1px !important;
+	opacity: 0 !important;
+	border:none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+// Spinners
+.spinner {
+	position: relative;
+	.subtract, .subtract-bros, .subtract-cars {
+		border-top-left-radius:5px;
+		border-bottom-left-radius:5px;
+		border-top-right-radius:0px;
+		border-bottom-right-radius:0px;
+		background: $button-color;
+		display: block;
+		padding: 12px 17px;
+		height: $input-height;
+		width: $input-height;
+		position:absolute;
+		bottom:$gutter /2;
+		left:$gutter /2;
+		@include transition;
+		&:hover {
+			cursor:pointer;
+			background: darken($button-color,20%);
+		}
+		&:active {
+			background: $alert;
+		}
+	}
+	.add, .add-bros, .add-cars {
+		border-top-right-radius:5px;
+		border-bottom-right-radius:5px;
+		border-top-left-radius:0px;
+		border-bottom-left-radius:0px;
+		background: $button-color;
+		display: block;
+		padding: 12px 17px;
+		height: $input-height;
+		width: $input-height;
+		position:absolute;
+		bottom:$gutter /2;
+		right: $gutter /2;
+		@include transition;
+		&:hover {
+			cursor:pointer;
+			background: darken($button-color,20%);
+		}
+	}
+	label.spin {
+		background: transparent;
+		border:none;
+		border-radius:0px;
+		text-align: center;
+		padding: 0 15px 17px;
+		font-size: 14px;
+		height: auto;
+//		width: $input-height * 3;
+
+	}
+	
+	input.spin {
+		margin-top: 0;
+		text-align: center;
+		font-family: $body-copy-font-family;
+		font-size: $input-font-size;
+		color: $label-font-color;
+		background: $input-bg;
+		border: 1px solid $input-border-color;
+		height:$input-height;
+//		width: $input-height * 3;
+		
+		display: block;
+		padding: $input-height / 3.25px * 1px;
+		border-radius: $global-radius;
+		@include transition;
+
+		&:valid {
+			border: 1px solid $input-border-color;
+		}
+	}
+}
+
+// The lowly textarea bringing up the rear
+textarea {
+	border: 1px solid $input-border-color;
+	background: $input-bg;
+	width: 100%;
+	display: block;
+	font-size: $label-font-size;
+	font-family: $body-copy-font-family;
+	color: $label-font-color;
+	line-height: 1rem;
+}
+
+// Fix mobile inputs to avoid the zoom
+@media (max-width: $small-breakpoint) {
+	input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"] {
+		font-size: 16px;
+		@if $label-style == inner {
+			padding-top: $input-height / 2.5px * 1px;
+		}
+	}
+	select {
+		font-size: 16px;
+	}
+}
+
+// Older IE doesn't like my range sliders
+.ie11 {
+	input[type="range"] {
+		background: transparent;
+		border:none;
+		height:$range-handle-height;
+	}
+}
+.ie10 {
+	input[type="range"] {
+		background: transparent;
+		border:none;
+		height:$range-handle-height;
+	}
+}
+.edge {
+	input[type="range"] {
+		height:$range-handle-height;
+	}
+	
+}
