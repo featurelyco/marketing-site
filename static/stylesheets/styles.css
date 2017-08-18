@@ -446,7 +446,7 @@ html {
 .flexbox .last-xs {
   order: 9999;
 }
-@media screen and (min-width: 43.75rem) {
+@media screen and (min-width: 0.4375rem) {
   /* line 161, ../sass/_flexbox.scss */
   .flexbox .s, .flexbox .s1, .flexbox .s-offset-1, .block-grid-s1 > li, .flexbox .s2, .flexbox .s-offset-2, .block-grid-s2 > li, .flexbox .s3, .flexbox .s-offset-3, .block-grid-s3 > li, .flexbox .s4, .flexbox .s-offset-4, .block-grid-s4 > li, .flexbox .s5, .flexbox .s-offset-5, .block-grid-s5 > li, .flexbox .s6, .flexbox .s-offset-6, .block-grid-s6 > li, .flexbox .s7, .flexbox .s-offset-7, .block-grid-s7 > li, .flexbox .s8, .flexbox .s-offset-8, .block-grid-s8 > li, .flexbox .s9, .flexbox .s-offset-9, .block-grid-s9 > li, .flexbox .s10, .flexbox .s-offset-10, .block-grid-s10 > li, .flexbox .s11, .flexbox .s-offset-11, .block-grid-s11 > li, .flexbox .s12, .flexbox .s-offset-12, .block-grid-s12 > li {
     flex-direction: column;
@@ -779,7 +779,7 @@ html {
   }
   /* line 242, ../sass/_flexbox.scss */
   .flexbox .container {
-    width: 43.75rem;
+    width: 0.4375rem;
   }
 }
 @media screen and (min-width: 56.25rem) {
@@ -6067,7 +6067,7 @@ textarea {
   line-height: 1rem;
 }
 
-@media (max-width: 43.75rem) {
+@media (max-width: 0.4375rem) {
   /* line 568, ../sass/_forms.scss */
   input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"] {
     font-size: 16px;
@@ -6153,7 +6153,7 @@ textarea {
   margin: 0 37.5vw;
 }
 
-@media (max-width: 43.75rem) {
+@media (max-width: 0.4375rem) {
   /* line 47, ../sass/_modals.scss */
   .modal {
     margin: 0 5vw;
@@ -6416,7 +6416,7 @@ ul.pricing-table.rounded .title, ol.pricing-table.rounded .title, dl.pricing-tab
   border-top-style: solid;
 }
 
-@media (max-width: 43.75rem) {
+@media (max-width: 0.4375rem) {
   /* line 35, ../sass/_tooltips.scss */
   .tooltip {
     position: static;
@@ -6681,20 +6681,21 @@ section.hero h1 {
   background-image: url("/static/images/logo-horiz.svg");
   height: 8.1875rem;
   background-repeat: no-repeat;
+  background-size: contain;
   margin-top: 5.625rem;
 }
-/* line 50, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 section.hero h2 {
   font-family: "Saira Condensed", "Helvetica Neue Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 2.75rem;
   color: #424D5D;
   letter-spacing: 0;
 }
-/* line 55, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 section.hero h2 .iconic-thumb .iconic-thumbs-up .iconic-property-fill {
   fill: #27B899;
 }
-/* line 59, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 section.hero .what-is-this {
   margin-top: 9.375rem;
   padding-bottom: 12.5rem;
@@ -6703,30 +6704,30 @@ section.hero .what-is-this {
   z-index: 100;
   position: relative;
 }
-/* line 66, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
 section.hero .what-is-this h3 {
   font-family: "Saira Condensed", "Helvetica Neue Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 3rem;
   color: #27B899;
 }
-/* line 72, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 section.hero .what-is-this p, section.hero .what-is-this dl dd, dl section.hero .what-is-this dd {
   font-size: 1.25rem;
   color: #2C3E4F;
 }
-/* line 76, ../sass/styles.scss */
+/* line 77, ../sass/styles.scss */
 section.hero .what-is-this ul li, section.hero .what-is-this ol li, section.hero .what-is-this dl li {
   font-size: 1.25rem;
   margin: 0.4375rem 0;
   color: #27B899;
 }
-/* line 80, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
 section.hero .what-is-this ul li span.text, section.hero .what-is-this ol li span.text, section.hero .what-is-this dl li span.text {
   color: #2C3E4F;
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 89, ../sass/styles.scss */
 section.features {
   background: url("/static/images/great-bg-top.svg") no-repeat center top, url("/static/images/great-bg-bottom.svg") no-repeat center bottom;
   background-size: cover;
@@ -6734,7 +6735,7 @@ section.features {
   margin-top: -15rem;
   padding-bottom: 9.375rem;
 }
-/* line 95, ../sass/styles.scss */
+/* line 96, ../sass/styles.scss */
 section.features h4 {
   font-family: "Saira Condensed", "Helvetica Neue Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 3rem;
@@ -6742,7 +6743,7 @@ section.features h4 {
   font-weight: 600;
   letter-spacing: 0;
 }
-/* line 101, ../sass/styles.scss */
+/* line 102, ../sass/styles.scss */
 section.features h4 small {
   font-size: 2.25rem;
   color: #134B71;
@@ -6750,75 +6751,75 @@ section.features h4 small {
   display: block;
   margin-top: 1.75rem;
 }
-/* line 109, ../sass/styles.scss */
+/* line 110, ../sass/styles.scss */
 section.features h5 {
   font-size: 1.875rem;
   color: #134C71;
 }
-/* line 113, ../sass/styles.scss */
+/* line 114, ../sass/styles.scss */
 section.features h5 .iconic {
   margin-right: 1rem;
 }
-/* line 115, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 section.features h5 .iconic.iconic-heart .iconic-property-fill {
   fill: #E44C3B;
 }
-/* line 119, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
 section.features h5 .iconic.iconic-magic-wand .iconic-magic-wand-ray-major {
   stroke: #E44C3B;
 }
-/* line 122, ../sass/styles.scss */
+/* line 123, ../sass/styles.scss */
 section.features h5 .iconic.iconic-magic-wand .iconic-magic-wand-ray-minor {
   stroke: #F19C1F;
 }
-/* line 126, ../sass/styles.scss */
+/* line 127, ../sass/styles.scss */
 section.features h5 .iconic.iconic-magic-wand .iconic-magic-wand-shaft-tip {
   fill: #F19C1F;
 }
-/* line 130, ../sass/styles.scss */
+/* line 131, ../sass/styles.scss */
 section.features h5 .iconic .iconic-connections-dot-center {
   fill: #E44C3B;
 }
-/* line 133, ../sass/styles.scss */
+/* line 134, ../sass/styles.scss */
 section.features h5 .iconic .iconic-connections-dot-left {
   fill: #8BD1FF;
 }
-/* line 136, ../sass/styles.scss */
+/* line 137, ../sass/styles.scss */
 section.features h5 .iconic .iconic-connections-dot-top-right {
   fill: #F19C1F;
 }
-/* line 139, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 section.features h5 .iconic .iconic-connections-dot-bottom-right {
   fill: #134C71;
 }
-/* line 142, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 section.features h5 .iconic.iconic-palette .iconic-property-fill {
   fill: #F19C1F;
 }
-/* line 145, ../sass/styles.scss */
+/* line 146, ../sass/styles.scss */
 section.features h5 .iconic .iconic-bullhorn-body-back, section.features h5 .iconic .iconic-bullhorn-body-front-lip {
   fill: #E44C3B;
 }
-/* line 148, ../sass/styles.scss */
+/* line 149, ../sass/styles.scss */
 section.features h5 .iconic .iconic-map-map-marker {
   fill: #E44C3B;
 }
-/* line 151, ../sass/styles.scss */
+/* line 152, ../sass/styles.scss */
 section.features h5 .iconic .iconic-map-street {
   stroke: #2C3E4F;
 }
-/* line 156, ../sass/styles.scss */
+/* line 157, ../sass/styles.scss */
 section.features p, section.features dl dd, dl section.features dd {
   font-weight: 500;
   font-size: 1.3125rem;
   color: #C4FFF2;
 }
 
-/* line 163, ../sass/styles.scss */
+/* line 164, ../sass/styles.scss */
 section.call-out {
   padding: 3.125rem 0;
 }
-/* line 165, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 section.call-out p, section.call-out dl dd, dl section.call-out dd {
   font-size: 36px;
   text-align: right;
@@ -6826,7 +6827,7 @@ section.call-out p, section.call-out dl dd, dl section.call-out dd {
   margin-top: 1.25rem;
 }
 
-/* line 173, ../sass/styles.scss */
+/* line 174, ../sass/styles.scss */
 section.testimonials {
   background: url("/static/images/testimonails-bg-top.svg") no-repeat center top, url("/static/images/testimonails-bg-bottom.svg") no-repeat center bottom;
   background-size: cover;
@@ -6834,19 +6835,19 @@ section.testimonials {
   z-index: 2;
   position: relative;
 }
-/* line 179, ../sass/styles.scss */
+/* line 180, ../sass/styles.scss */
 section.testimonials h6 {
   font-weight: 600;
   font-size: 2.25rem;
   letter-spacing: 0;
 }
-/* line 184, ../sass/styles.scss */
+/* line 185, ../sass/styles.scss */
 section.testimonials .panel {
   border-radius: 5px;
   padding: 3.125rem;
   position: relative;
 }
-/* line 188, ../sass/styles.scss */
+/* line 189, ../sass/styles.scss */
 section.testimonials .panel blockquote {
   border: none;
   padding: 0;
@@ -6854,19 +6855,19 @@ section.testimonials .panel blockquote {
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
-/* line 195, ../sass/styles.scss */
+/* line 196, ../sass/styles.scss */
 section.testimonials .panel p, section.testimonials .panel dl dd, dl section.testimonials .panel dd {
   font-size: 1.25rem;
   margin-bottom: 6rem;
 }
-/* line 198, ../sass/styles.scss */
+/* line 199, ../sass/styles.scss */
 section.testimonials .panel p small, section.testimonials .panel dl dd small, dl section.testimonials .panel dd small {
   font-size: 1rem;
   color: #646464;
   margin-left: 0.3125rem;
   display: block;
 }
-/* line 205, ../sass/styles.scss */
+/* line 206, ../sass/styles.scss */
 section.testimonials .panel img {
   border-radius: 50%;
   border: 10px solid #3C96D2;
@@ -6874,13 +6875,13 @@ section.testimonials .panel img {
   left: -0.625rem;
   bottom: -4.6875rem;
 }
-/* line 212, ../sass/styles.scss */
+/* line 213, ../sass/styles.scss */
 section.testimonials .panel a, section.testimonials .panel .button, section.testimonials .panel button {
   position: absolute;
   right: 50px;
 }
 
-/* line 219, ../sass/styles.scss */
+/* line 220, ../sass/styles.scss */
 section.pricing {
   background: #2C3E4F;
   z-index: 1;
@@ -6889,50 +6890,49 @@ section.pricing {
   padding-bottom: 6.25rem;
   position: relative;
 }
-/* line 226, ../sass/styles.scss */
+/* line 227, ../sass/styles.scss */
 section.pricing h6 {
   font-size: 2.25rem;
   color: #99C4EC;
 }
-/* line 230, ../sass/styles.scss */
+/* line 231, ../sass/styles.scss */
 section.pricing .pricing-table {
   border: none;
   position: relative;
 }
-/* line 233, ../sass/styles.scss */
+/* line 234, ../sass/styles.scss */
 section.pricing .pricing-table .title {
   padding: 1.5rem;
   font-weight: 500;
 }
-/* line 237, ../sass/styles.scss */
+/* line 238, ../sass/styles.scss */
 section.pricing .pricing-table .get-it {
   padding: 2rem 4rem;
 }
-/* line 240, ../sass/styles.scss */
+/* line 241, ../sass/styles.scss */
 section.pricing .pricing-table.startup {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   z-index: 5;
   margin-top: 1rem;
 }
-/* line 245, ../sass/styles.scss */
+/* line 246, ../sass/styles.scss */
 section.pricing .pricing-table.startup .title {
   border-top-left-radius: 20px;
   background: #27B899;
   color: #4CFFD9;
 }
-/* line 250, ../sass/styles.scss */
+/* line 251, ../sass/styles.scss */
 section.pricing .pricing-table.startup .price {
   color: #27B899;
 }
-/* line 254, ../sass/styles.scss */
+/* line 255, ../sass/styles.scss */
 section.pricing .pricing-table.startup .get-it a, section.pricing .pricing-table.startup .get-it .button, section.pricing .pricing-table.startup .get-it button {
   font-size: 1.375rem;
 }
-/* line 259, ../sass/styles.scss */
+/* line 260, ../sass/styles.scss */
 section.pricing .pricing-table.series-b {
   border-radius: 20px;
-  border-bottom-left-radius: 20px;
   z-index: 10;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -6943,7 +6943,7 @@ section.pricing .pricing-table.series-b {
 section.pricing .pricing-table.series-b .title {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  padding: 1.875rem;
+  padding: 2.5rem 1.875rem;
   background: #E44C3B;
   color: #FFBDB5;
 }
@@ -6953,8 +6953,8 @@ section.pricing .pricing-table.series-b .price {
 }
 /* line 274, ../sass/styles.scss */
 section.pricing .pricing-table.series-b .get-it {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 /* line 279, ../sass/styles.scss */
 section.pricing .pricing-table.ipo {
@@ -6993,19 +6993,99 @@ section.contact p, section.contact dl dd, dl section.contact dd {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+/* line 312, ../sass/styles.scss */
+section.contact label[for="question"] {
+  z-index: 1;
+  border-bottom: none;
+  margin-bottom: -1rem;
+}
+/* line 317, ../sass/styles.scss */
+section.contact textarea {
+  border-top: none;
+  padding: 0 1rem 0 1rem;
+  line-height: 1.5rem;
+}
 
-/* line 314, ../sass/styles.scss */
+/* line 324, ../sass/styles.scss */
 footer {
   background: #E44C3B;
   padding: 10rem 0;
 }
-/* line 317, ../sass/styles.scss */
+/* line 327, ../sass/styles.scss */
 footer p, footer dl dd, dl footer dd, footer a, footer .button, footer button {
   font-size: 1.375rem;
   font-weight: 500;
   color: #792B22;
 }
-/* line 322, ../sass/styles.scss */
+/* line 332, ../sass/styles.scss */
 footer p, footer dl dd, dl footer dd {
   margin-top: 4rem;
+}
+
+@media (max-width: 56.25rem) {
+  /* line 339, ../sass/styles.scss */
+  section.hero .what-is-this {
+    margin-top: 0rem;
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+    background: url('/static/images/product-shot.png?1502708953') no-repeat center top;
+    background-size: 80%;
+    z-index: 100;
+    position: relative;
+  }
+  /* line 347, ../sass/styles.scss */
+  section.hero .what-is-this h3 {
+    font-family: "Saira Condensed", "Helvetica Neue Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #27B899;
+  }
+  /* line 353, ../sass/styles.scss */
+  section.hero .what-is-this p, section.hero .what-is-this dl dd, dl section.hero .what-is-this dd {
+    font-size: 1.25rem;
+    color: #2C3E4F;
+  }
+  /* line 357, ../sass/styles.scss */
+  section.hero .what-is-this ul li, section.hero .what-is-this ol li, section.hero .what-is-this dl li {
+    font-size: 1.25rem;
+    margin: 0.4375rem 0;
+    color: #27B899;
+  }
+  /* line 361, ../sass/styles.scss */
+  section.hero .what-is-this ul li span.text, section.hero .what-is-this ol li span.text, section.hero .what-is-this dl li span.text {
+    color: #2C3E4F;
+  }
+
+  /* line 367, ../sass/styles.scss */
+  section.call-out p, section.call-out dl dd, dl section.call-out dd {
+    text-align: center;
+    line-height: 2rem;
+  }
+  /* line 371, ../sass/styles.scss */
+  section.call-out a, section.call-out .button, section.call-out button {
+    display: block;
+  }
+
+  /* line 375, ../sass/styles.scss */
+  section.testimonials .panel {
+    margin-bottom: 4rem;
+  }
+
+  /* line 378, ../sass/styles.scss */
+  section.pricing .grid.collapse {
+    margin: 0 20px;
+  }
+  /* line 380, ../sass/styles.scss */
+  section.pricing .grid.collapse .pricing-table {
+    margin-bottom: 1rem;
+  }
+  /* line 382, ../sass/styles.scss */
+  section.pricing .grid.collapse .pricing-table.startup, section.pricing .grid.collapse .pricing-table.series-b, section.pricing .grid.collapse .pricing-table.ipo {
+    border-radius: 20px;
+  }
+  /* line 384, ../sass/styles.scss */
+  section.pricing .grid.collapse .pricing-table.startup .title, section.pricing .grid.collapse .pricing-table.series-b .title, section.pricing .grid.collapse .pricing-table.ipo .title {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }

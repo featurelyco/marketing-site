@@ -7,7 +7,7 @@ $base-font-size:16px;
 // breakpoint variable between stylesheets
 $large-breakpoint: rem-me(1140);
 $medium-breakpoint: rem-me(900);
-$small-breakpoint: rem-me(700);
+$small-breakpoint: rem-me(7);
 $gutter: 40px;
 @import "settings";
 @import "flexbox";
@@ -45,6 +45,7 @@ section.hero {
 		background-image: url('/static/images/logo-horiz.svg');
 		height: rem-me(131);
 		background-repeat: no-repeat;
+		background-size: contain;
 		margin-top: rem-me(90);
 	}
 	h2 {
@@ -56,7 +57,7 @@ section.hero {
 			fill:$green;
 		}
 	}
-	.what-is-this {
+	.what-is-this { // a center for ants?
 		margin-top: rem-me(150);
 		padding-bottom: rem-me(200);
 		background: image-url('product-shot.png') no-repeat 100% top;		
@@ -257,14 +258,13 @@ section.pricing {
 			}
 		}
 		&.series-b {
-			border-radius: 20px;
-			border-bottom-left-radius: 20px;
+			border-radius: 20px;			
 			z-index: 10;
 			@include shadow();
 			.title {
 				border-top-left-radius: 20px;
 				border-top-right-radius: 20px;
-				padding: rem-me(30);
+				padding: rem-me(40) rem-me(30);
 				background: $red;
 				color:#FFBDB5;
 			}
@@ -272,8 +272,8 @@ section.pricing {
 				color: $red;
 			}
 			.get-it {
-				padding-top: 2.25rem;
-				padding-bottom: 2.25rem;
+				padding-top: 2rem;
+				padding-bottom: 2rem;
 			}
 		}
 		&.ipo {
@@ -309,6 +309,16 @@ section.contact {
 		font-size: rem-me(20);
 		line-height: 1.75rem;
 	}
+	label[for="question"] {
+		z-index: 1;
+		border-bottom: none;
+		margin-bottom: -1rem;
+	}
+	textarea {
+		border-top: none;
+		padding: 0 1rem 0 1rem;
+		line-height: 1.5rem;
+	}
 }
 
 footer {
@@ -321,5 +331,61 @@ footer {
 	}
 	p {
 		margin-top: 4rem;
+	}
+}
+
+// Please render responsively
+@media (max-width: $medium-breakpoint) {
+	section.hero  .what-is-this {
+		margin-top: rem-me(0);
+		padding-top: rem-me(200);
+		padding-bottom: rem-me(200);
+		background: image-url('product-shot.png') no-repeat center top;
+		background-size: 80%;
+		z-index: 100;
+		position: relative;
+		h3 {
+			font-family: $sans-serif;
+			font-weight: 600;
+			font-size: rem-me(48);
+			color: $green;
+		}
+		p {
+			font-size: rem-me(20);
+			color: $gray;
+		}
+		ul li {
+			font-size: rem-me(20);
+			margin: rem-me(7) 0;
+			color: $green;
+			& span.text {
+				color: $gray;
+			}
+		}
+	}	
+	section.call-out {
+		p {
+			text-align: center;
+			line-height: 2rem;
+		}
+		a {
+			display: block;
+		}
+	}
+	section.testimonials .panel {
+		margin-bottom: 4rem;
+	}
+	section.pricing .grid.collapse {
+		margin: 0 $gutter/2; 
+		.pricing-table {
+			margin-bottom: 1rem;
+			&.startup, &.series-b, &.ipo {
+				border-radius: 20px;
+				.title {
+					border-top-left-radius: 20px;
+				border-top-right-radius: 20px
+				}
+			}
+		}
 	}
 }
