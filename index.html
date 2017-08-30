@@ -25,12 +25,10 @@
 			<div class="s12 m6">
 				<h1>Featurely</h1>
 				<h2>What’s next for your product? <br>
-				Let your <span class="brand-font">users</span> tell you. <img class="iconic iconic-md" data-src="/static/images/iconic/thumb.svg" data-direction="up"></h2>
+				Let your <span class="brand-font">users</span> tell you. <img class="iconic iconic-md s-hide" data-src="/static/images/iconic/thumb.svg" data-direction="up"></h2>
 				<div class="grid">
 					<div class="s12 m6">
-						<div class="button large fill action">
-							Sign Me Up!
-						</div>
+						<a href="#pricing" class="button large fill action scroll">Sign Me Up!</a>
 					</div>
 					<div class="s12 m6">
 						<a href="#features" class="button large fill secondary-action scroll">
@@ -100,7 +98,7 @@
 			</div>
 			<div class="s12 m6">
 				<div>
-					<a href="#" class="button large action">
+					<a href="/featurely" class="button large action">
 						Check It Out, No Fool’n
 					</a>
 				</div>
@@ -108,7 +106,7 @@
 		</div>
 	</section>
 	
-	<section class="testimonials">
+	<section class="testimonials no-show">
 		
 		<div class="grid">
 			<div class="s12">
@@ -173,53 +171,62 @@
 		</div>
 	</section>
 	
-	<section class="pricing">
+	<section id="pricing" class="pricing">
 		<div class="grid">
 			<div class="s12">
 				<h6 class="text-center">Alright, downt to business, what's this going to cost me?</h6>
 			</div>
 		</div>
-		<div class="grid collapse">
-			<div class="s12 m4 clm">
-				<ul class="pricing-table startup">
-					<li class="title">StartUp Package</li>
-					<li class="price">$1.99/Month</li>
-					<li class="included">Vestibulum interdum magna sed quam</li>
-					<li class="included">Donec id eros eget quam aliquam gravida</li>
-					<li class="included">Donec id eros eget quam aliquam gravida</li>
-					<li class="included">Donec non tortor in arcu mollis feugiat</li>
-					<li class="included">Cras aliquam massa ullamcorper sapien</li>
-					<li class="get-it"><a class="button medium fill success">Get It Get It</a></li>
-				</ul>
+		<div class="grid">
+			<div class="s12 m9 clm">
+				<div class="grid collapse">
+					<div class="s12 m4 clm">
+						<ul class="pricing-table startup">
+							<li class="title">StartUp Package</li>
+							<li class="price">$8/Month</li>
+							<li class="included">3 Projects</li>
+							<li class="included">30 Active Features</li>
+							<li class="included"><strike>Analytics</strike></li>
+							<li class="get-it"><a class="button medium fill success">Get It</a></li>
+						</ul>
+					</div>
+					<div class="s12 m4 clm">
+						<ul class="pricing-table series-b">
+							<li class="title">Series B Package</li>
+							<li class="price">$15/Month</li>
+							<li class="included">5 Projects</li>
+							<li class="included">50 Active Features</li>
+							<li class="included">Analytics</li>
+							<li class="get-it"><a class="button large fill action">Get It</a></li>
+						</ul>
+					</div>
+					<div class="s12 m4 clm">
+						<ul class="pricing-table ipo">
+							<li class="title">IPO Package</li>
+							<li class="price">$35/Month</li>
+							<li class="included">Unlimited Projects</li>
+							<li class="included">Unlimited Active Features</li>
+							<li class="included">Analytics</li>
+							<li class="get-it"><a class="button medium fill error">Get It</a></li>
+						</ul>
+					</div>
+
+				</div>
 			</div>
-			<div class="s12 m4 clm">
-				<ul class="pricing-table series-b">
-					<li class="title">Series B Package</li>
-					<li class="price">$21/Month</li>
-					<li class="included">Praesent posuere nunc at neque blandit pretium</li>
-					<li class="included">Mauris aliquet mattis metus</li>
-					<li class="included">Donec id eros eget quam aliquam gravida</li>
-					<li class="included">Vivamus convallis urna id felis</li>
-					<li class="included">Quisque in wisi quis orci tincidunt fermentum</li>
-					<li class="get-it"><a class="button large fill action">Get It Get It</a></li>
-				</ul>
-			</div>
-			<div class="s12 m4 clm">
-				<ul class="pricing-table ipo">
-					<li class="title">IPO Package</li>
-					<li class="price">$101/Month</li>
-					<li class="included">Pellentesque dapibus sodales enim</li>
-					<li class="included">Mauris aliquet mattis metus</li>
-					<li class="included">Quisque venenatis ante sit amet dolor</li>
-					<li class="included">Sed accumsan quam ac tellus</li>
-					<li class="included">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</li>
-					<li class="get-it"><a class="button medium fill error">Get It Get It</a></li>
+			<div class="s12 m3 clm">
+				<ul class="pricing-table prove-it">
+					<li class="title">Prove It Package</li>
+					<li class="price">Free Forever</li>
+					<li class="included">1 Project</li>
+					<li class="included">10 Active Features</li>
+					<li class="get-it"><a class="button medium fill">Get It</a></li>
 				</ul>
 			</div>
 		</div>
+
 	</section>
 	
-	<section class="contact">
+	<section class="contact no-show">
 		<div class="grid">
 			<div class="s12 m6">
 				<h6 class="text-center">
@@ -270,7 +277,7 @@
 			</div>
 			<div class="s12 m6">
 				<p>&copy;2017 - Half Ass Development, LLC</p>
-				<ul class="inline-bar">
+				<ul class="inline-bar no-show">
 					<li><a href="">Contact</a></li>
 					<li><a href="">Jobs</a></li>
 					<li><a href="">Terms of Use</a></li>

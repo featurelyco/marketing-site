@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Saira+Condensed|Satisfy");
 /* line 8, ../sass/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, dl dd, blockquote, pre,
@@ -6885,52 +6884,55 @@ section.testimonials .panel a, section.testimonials .panel .button, section.test
 section.pricing {
   background: #2C3E4F;
   z-index: 1;
-  margin-top: -12.5rem;
-  padding-top: 15.625rem;
+  padding-top: 6.25rem;
   padding-bottom: 6.25rem;
   position: relative;
 }
-/* line 227, ../sass/styles.scss */
+/* line 229, ../sass/styles.scss */
 section.pricing h6 {
   font-size: 2.25rem;
   color: #99C4EC;
 }
-/* line 231, ../sass/styles.scss */
+/* line 233, ../sass/styles.scss */
 section.pricing .pricing-table {
   border: none;
   position: relative;
 }
-/* line 234, ../sass/styles.scss */
+/* line 236, ../sass/styles.scss */
 section.pricing .pricing-table .title {
   padding: 1.5rem;
   font-weight: 500;
 }
-/* line 238, ../sass/styles.scss */
+/* line 240, ../sass/styles.scss */
 section.pricing .pricing-table .get-it {
   padding: 2rem 4rem;
 }
-/* line 241, ../sass/styles.scss */
+/* line 243, ../sass/styles.scss */
 section.pricing .pricing-table.startup {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   z-index: 5;
   margin-top: 1rem;
 }
-/* line 246, ../sass/styles.scss */
+/* line 248, ../sass/styles.scss */
 section.pricing .pricing-table.startup .title {
   border-top-left-radius: 20px;
   background: #27B899;
   color: #4CFFD9;
 }
-/* line 251, ../sass/styles.scss */
+/* line 253, ../sass/styles.scss */
 section.pricing .pricing-table.startup .price {
   color: #27B899;
 }
-/* line 255, ../sass/styles.scss */
+/* line 256, ../sass/styles.scss */
+section.pricing .pricing-table.startup strike {
+  color: #CCCCCC;
+}
+/* line 260, ../sass/styles.scss */
 section.pricing .pricing-table.startup .get-it a, section.pricing .pricing-table.startup .get-it .button, section.pricing .pricing-table.startup .get-it button {
   font-size: 1.375rem;
 }
-/* line 260, ../sass/styles.scss */
+/* line 265, ../sass/styles.scss */
 section.pricing .pricing-table.series-b {
   border-radius: 20px;
   z-index: 10;
@@ -6939,7 +6941,7 @@ section.pricing .pricing-table.series-b {
   -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
-/* line 264, ../sass/styles.scss */
+/* line 269, ../sass/styles.scss */
 section.pricing .pricing-table.series-b .title {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -6947,83 +6949,123 @@ section.pricing .pricing-table.series-b .title {
   background: #E44C3B;
   color: #FFBDB5;
 }
-/* line 271, ../sass/styles.scss */
+/* line 276, ../sass/styles.scss */
 section.pricing .pricing-table.series-b .price {
   color: #E44C3B;
 }
-/* line 274, ../sass/styles.scss */
+/* line 279, ../sass/styles.scss */
 section.pricing .pricing-table.series-b .get-it {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-/* line 279, ../sass/styles.scss */
+/* line 284, ../sass/styles.scss */
 section.pricing .pricing-table.ipo {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   z-index: 6;
   margin-top: 1rem;
 }
-/* line 284, ../sass/styles.scss */
+/* line 289, ../sass/styles.scss */
 section.pricing .pricing-table.ipo .title {
   border-top-right-radius: 20px;
   background: #F19C1F;
   color: #FFD89F;
 }
-/* line 289, ../sass/styles.scss */
+/* line 294, ../sass/styles.scss */
 section.pricing .pricing-table.ipo .price {
   color: #F19C1F;
 }
-/* line 293, ../sass/styles.scss */
+/* line 298, ../sass/styles.scss */
 section.pricing .pricing-table.ipo .get-it a, section.pricing .pricing-table.ipo .get-it .button, section.pricing .pricing-table.ipo .get-it button {
   font-size: 1.375rem;
 }
+/* line 304, ../sass/styles.scss */
+section.pricing ul.prove-it, section.pricing ol.prove-it, section.pricing dl.prove-it {
+  color: #FFFFFF;
+  background: transparent;
+  margin-top: 3rem;
+}
+/* line 308, ../sass/styles.scss */
+section.pricing ul.prove-it .title, section.pricing ol.prove-it .title, section.pricing dl.prove-it .title, section.pricing ul.prove-it .price, section.pricing ol.prove-it .price, section.pricing dl.prove-it .price, section.pricing ul.prove-it .included, section.pricing ol.prove-it .included, section.pricing dl.prove-it .included {
+  background: transparent;
+  border-bottom: 1px solid #476580;
+}
+/* line 312, ../sass/styles.scss */
+section.pricing ul.prove-it .title, section.pricing ol.prove-it .title, section.pricing dl.prove-it .title {
+  color: #3C96D2;
+  font-family: "Satisfy", sans-serif;
+  font-size: 1.75rem;
+}
+/* line 317, ../sass/styles.scss */
+section.pricing ul.prove-it .price, section.pricing ol.prove-it .price, section.pricing dl.prove-it .price {
+  color: #FFFFFF;
+}
+/* line 320, ../sass/styles.scss */
+section.pricing ul.prove-it li.included, section.pricing ol.prove-it li.included, section.pricing dl.prove-it li.included {
+  font-size: 1.125rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  padding: 0.5rem 1.5rem;
+}
+/* line 250, ../sass/_mixins.scss */
+section.pricing ul.prove-it li.included:nth-child(odd), section.pricing ol.prove-it li.included:nth-child(odd), section.pricing dl.prove-it li.included:nth-child(odd) {
+  background: transparent;
+}
+/* line 330, ../sass/styles.scss */
+section.pricing ul.prove-it .get-it, section.pricing ol.prove-it .get-it, section.pricing dl.prove-it .get-it {
+  padding: 0;
+}
+/* line 332, ../sass/styles.scss */
+section.pricing ul.prove-it .get-it a, section.pricing ol.prove-it .get-it a, section.pricing dl.prove-it .get-it a, section.pricing ul.prove-it .get-it .button, section.pricing ol.prove-it .get-it .button, section.pricing dl.prove-it .get-it .button, section.pricing ul.prove-it .get-it button, section.pricing ol.prove-it .get-it button, section.pricing dl.prove-it .get-it button {
+  font-size: 1.125rem;
+}
 
-/* line 301, ../sass/styles.scss */
+/* line 339, ../sass/styles.scss */
 section.contact {
   background: #F9F9F9;
   padding: 4rem 0;
 }
-/* line 304, ../sass/styles.scss */
+/* line 342, ../sass/styles.scss */
 section.contact h6 {
   font-weight: 600;
   font-size: 2.25rem;
 }
-/* line 308, ../sass/styles.scss */
+/* line 346, ../sass/styles.scss */
 section.contact p, section.contact dl dd, dl section.contact dd {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-/* line 312, ../sass/styles.scss */
+/* line 350, ../sass/styles.scss */
 section.contact label[for="question"] {
   z-index: 1;
   border-bottom: none;
   margin-bottom: -1rem;
 }
-/* line 317, ../sass/styles.scss */
+/* line 355, ../sass/styles.scss */
 section.contact textarea {
   border-top: none;
   padding: 0 1rem 0 1rem;
   line-height: 1.5rem;
 }
 
-/* line 324, ../sass/styles.scss */
+/* line 362, ../sass/styles.scss */
 footer {
   background: #E44C3B;
   padding: 10rem 0;
 }
-/* line 327, ../sass/styles.scss */
+/* line 365, ../sass/styles.scss */
 footer p, footer dl dd, dl footer dd, footer a, footer .button, footer button {
   font-size: 1.375rem;
   font-weight: 500;
   color: #792B22;
 }
-/* line 332, ../sass/styles.scss */
+/* line 370, ../sass/styles.scss */
 footer p, footer dl dd, dl footer dd {
   margin-top: 4rem;
 }
 
 @media (max-width: 56.25rem) {
-  /* line 339, ../sass/styles.scss */
+  /* line 377, ../sass/styles.scss */
   section.hero .what-is-this {
     margin-top: 0rem;
     padding-top: 12.5rem;
@@ -7033,57 +7075,57 @@ footer p, footer dl dd, dl footer dd {
     z-index: 100;
     position: relative;
   }
-  /* line 347, ../sass/styles.scss */
+  /* line 385, ../sass/styles.scss */
   section.hero .what-is-this h3 {
     font-family: "Saira Condensed", "Helvetica Neue Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 3rem;
     color: #27B899;
   }
-  /* line 353, ../sass/styles.scss */
+  /* line 391, ../sass/styles.scss */
   section.hero .what-is-this p, section.hero .what-is-this dl dd, dl section.hero .what-is-this dd {
     font-size: 1.25rem;
     color: #2C3E4F;
   }
-  /* line 357, ../sass/styles.scss */
+  /* line 395, ../sass/styles.scss */
   section.hero .what-is-this ul li, section.hero .what-is-this ol li, section.hero .what-is-this dl li {
     font-size: 1.25rem;
     margin: 0.4375rem 0;
     color: #27B899;
   }
-  /* line 361, ../sass/styles.scss */
+  /* line 399, ../sass/styles.scss */
   section.hero .what-is-this ul li span.text, section.hero .what-is-this ol li span.text, section.hero .what-is-this dl li span.text {
     color: #2C3E4F;
   }
 
-  /* line 367, ../sass/styles.scss */
+  /* line 405, ../sass/styles.scss */
   section.call-out p, section.call-out dl dd, dl section.call-out dd {
     text-align: center;
     line-height: 2rem;
   }
-  /* line 371, ../sass/styles.scss */
+  /* line 409, ../sass/styles.scss */
   section.call-out a, section.call-out .button, section.call-out button {
     display: block;
   }
 
-  /* line 375, ../sass/styles.scss */
+  /* line 413, ../sass/styles.scss */
   section.testimonials .panel {
     margin-bottom: 4rem;
   }
 
-  /* line 378, ../sass/styles.scss */
+  /* line 416, ../sass/styles.scss */
   section.pricing .grid.collapse {
     margin: 0 20px;
   }
-  /* line 380, ../sass/styles.scss */
+  /* line 419, ../sass/styles.scss */
   section.pricing .grid.collapse .pricing-table {
     margin-bottom: 1rem;
   }
-  /* line 382, ../sass/styles.scss */
+  /* line 421, ../sass/styles.scss */
   section.pricing .grid.collapse .pricing-table.startup, section.pricing .grid.collapse .pricing-table.series-b, section.pricing .grid.collapse .pricing-table.ipo {
     border-radius: 20px;
   }
-  /* line 384, ../sass/styles.scss */
+  /* line 423, ../sass/styles.scss */
   section.pricing .grid.collapse .pricing-table.startup .title, section.pricing .grid.collapse .pricing-table.series-b .title, section.pricing .grid.collapse .pricing-table.ipo .title {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;

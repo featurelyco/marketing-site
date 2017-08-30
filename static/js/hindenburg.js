@@ -99,10 +99,10 @@ if ($('.progress-bar').hasClass('bar')) {
 }
 
 // Make Scrolling Great Again
-//$(".scroll").click(function(event){		
-//	event.preventDefault();
-//	$('html,body').animate({scrollTop:$(this.hash).offset().top -70}, 700);
-//});
+$(".scroll").click(function(event){		
+	event.preventDefault();
+	$('html,body').animate({scrollTop:$(this.hash).offset().top -70}, 700);
+});
 
 // Functions for Mega Menu
 if ($('nav').hasClass('mega-menu')) {

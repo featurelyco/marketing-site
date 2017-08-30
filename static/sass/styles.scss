@@ -3,7 +3,7 @@ $base-font-size:16px;
 @import "reset";
 @import "functions";
 @import "mixins";
-@import url('https://fonts.googleapis.com/css?family=Saira+Condensed|Satisfy');
+// @import url('https://fonts.googleapis.com/css?family=Saira+Condensed|Satisfy');
 // breakpoint variable between stylesheets
 $large-breakpoint: rem-me(1140);
 $medium-breakpoint: rem-me(900);
@@ -220,8 +220,10 @@ section.testimonials {
 section.pricing {
 	background: $gray;
 	z-index: 1;
-	margin-top: rem-me(-200);
-	padding-top: rem-me(250);
+//	Bring these styles back when the testimonials section returns, phoenix like
+//	margin-top: rem-me(-200);
+//	padding-top: rem-me(250);
+	padding-top: rem-me(100);
 	padding-bottom: rem-me(100);
 	position: relative;
 	h6 {
@@ -250,6 +252,9 @@ section.pricing {
 			}
 			.price {
 				color: $green;
+			}
+			strike {
+				color: $iron;
 			}
 			.get-it {
 				a {
@@ -293,6 +298,39 @@ section.pricing {
 				a {
 					font-size: rem-me(22);
 				}
+			}
+		}
+	}
+	ul.prove-it {
+		color: $white;
+		background: transparent;
+		margin-top: 3rem;
+		.title, .price, .included {
+			background: transparent;
+			border-bottom: 1px solid lighten($gray, 15%);
+		}
+		.title {
+			color: $blue;
+			font-family: $brand-font;
+			font-size: rem-me(28);
+		}
+		.price {
+			color: $white;
+		}
+		li.included {
+			font-size: rem-me(18);
+			
+			text-align: center;
+			font-size: 0.9375rem;
+			padding: 0.5rem 1.5rem;
+			@include odd {
+				background: transparent;
+			}
+		}
+		.get-it {
+			padding: 0;
+			a {
+				font-size: rem-me(18);
 			}
 		}
 	}
@@ -377,13 +415,14 @@ footer {
 	}
 	section.pricing .grid.collapse {
 		margin: 0 $gutter/2; 
+		
 		.pricing-table {
 			margin-bottom: 1rem;
 			&.startup, &.series-b, &.ipo {
 				border-radius: 20px;
 				.title {
 					border-top-left-radius: 20px;
-				border-top-right-radius: 20px
+					border-top-right-radius: 20px
 				}
 			}
 		}
