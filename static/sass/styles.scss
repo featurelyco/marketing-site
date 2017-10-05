@@ -220,7 +220,7 @@ section.testimonials {
 section.pricing {
 	background: $gray;
 	z-index: 1;
-//	Bring these styles back when the testimonials section returns, phoenix like
+//	Bring these styles back when the testimonials section returns, phoenix like from the dead
 //	margin-top: rem-me(-200);
 //	padding-top: rem-me(250);
 	padding-top: rem-me(100);
@@ -369,6 +369,115 @@ footer {
 	}
 	p {
 		margin-top: 4rem;
+	}
+}
+
+header {
+	border-bottom: 1px solid $gainsboro;
+	@include shadow;
+	h1 {
+		@include image-replacement;
+		background-image: url('/static/images/logo-horiz.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin-top: rem-me(10);
+	}
+}
+
+//Sign up
+#get-me-paid-bitch {
+	.sign-up {
+		padding-top: rem-me(150);
+		background: $blue;
+		h2 {
+			font-size: rem-me(32);
+			color: $gray;
+		}
+		p {
+			font-size: rem-me(21);
+			color: #D9EDFF;
+		}
+		ul.features {
+			list-style-type: none;
+			li {
+				font-size: rem-me(28);
+				color: $gray;
+				margin-bottom: 1rem;
+				margin-left: 10rem;
+				&.price {
+					text-align: center;
+					font-size: rem-me(36);
+					color: $gray;
+					margin: 2rem 0;
+				}
+				&.included:before {
+					position: relative;
+					top: 1px;
+					left: -10px;
+					font-family: 'Iconic';
+					display: inline-block;
+					speak: none;
+					line-height: 1;
+					vertical-align: baseline;
+					font-weight: 400;
+					font-style: normal;
+					font-size: 16px;
+					content: '\e154';
+					color: $green;
+					
+				}
+				&.not-included{
+					color: #485562;
+					&:before {
+						position: relative;
+						top: 1px;
+						left: -10px;
+						font-family: 'Iconic';
+						display: inline-block;
+						speak: none;
+						line-height: 1;
+						vertical-align: baseline;
+						font-weight: 400;
+						font-style: normal;
+						font-size: 16px;
+						content: '\e26c';
+						color: $red;
+					}
+					
+				}
+			}
+		}
+	}
+	#card_number {
+		transition: none;
+		&.visa {
+			background: image-url('visa.svg') no-repeat 95% center;
+			background-size: 20%;
+		}
+		&.amex {
+			background: image-url('amex.svg') no-repeat 95% center;
+			background-size: 20%;
+		}
+		&.discover {
+			background: image-url('discover.svg') no-repeat 95% center;
+			background-size: 20%;
+		}
+		&.mastercard {
+			background: image-url('mastercard.svg') no-repeat 95% center;
+			background-size: 20%;
+		}
+	}
+	#make-it-rain {
+		margin-bottom: 5rem;
+	}
+}
+
+fieldset {
+	legend {
+		font-family: $sans-serif;
+		font-size: rem-me(24);
+		color: $gray;
+		margin-bottom: 0.75rem;
 	}
 }
 
