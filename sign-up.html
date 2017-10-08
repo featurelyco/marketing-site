@@ -10,7 +10,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width" />
 
-	<title>Featurely</title>
+	<title>Get Featurely</title>
 
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="/static/stylesheets/styles.css">
@@ -19,245 +19,115 @@
 	<script src="/static/js/jquery.min.js"></script>
 	
 </head>
-<body>
-	<section class="hero">
-		<div class="grid">
-			<div class="s12 m6">
-				<h1>Featurely</h1>
-				<h2>What's next for your product? <br>
-				Let your <span class="brand-font">users</span> tell you. <img class="iconic iconic-md s-hide" data-src="/static/images/iconic/thumb.svg" data-direction="up"></h2>
-				<div class="grid">
-					<div class="s12 m6">
-						<a href="#pricing" class="button large fill action scroll">Sign Me Up!</a>
-					</div>
-					<div class="s12 m6">
-						<a href="#features" class="button large fill secondary-action scroll">
-							Tell Me More
-						</a>
-					</div>
-				</div>
-			</div>
+<body id="get-me-paid-bitch">
+<!-- If you're digging though the source code and find the id above offensive, please note that we're not calling you our beloved users 'bitch', it's mearly a quote from 'East Bound and Down'. If anything it references the poorly written code below. -->
+	<header class="fixed">
+		<div class="s6 m3 clm center">
+			<h1><a href="/">Featurely</a></h1>
 		</div>
-		
-		<div class="grid what-is-this">
-			<div class="s12 m6">
-				<h3>What Is Featurely?</h3>
-				<p>Featurely gives your users a voice and shows you are listening! Featurely organizes the massive amount of feedback into a tractable roadmap:</p>
-				<ul class="square">
-					<li><span class="text">Allow users to submit ideas</span></li>
-					<li><span class="text">Other users can vote on ideas they love</span></li>
-					<li><span class="text">Show users progress on requests by updating statuses</span></li>
-					<li><span class="text">Be notified when new requests are received</span></li>
-					<li><span class="text">Contact users who voted on request to gather more information</span></li>
-				</ul>
-			</div>
-		</div>
-	</section>
+	</header>
 	
-	<section class="features" id="features">
-		<div class="grid">
-			<div class="s12">
-				<h4 class="text-center">
-					What's so great about <span class="brand-font">Featurely</span>? <br>
-					<small>So glad you asked.</small>
-				</h4>
-			</div>
-		</div>
-		<div class="grid">
-			<div class="s12 m4">
-				<h5><img class="iconic iconic-md" data-src="/static/images/iconic/heart.svg"> Love Your Users</h5>
-				<p>Featurely makes it simple to gather new ideas and suggestions from your users and they will love YOU for it.</p>
-			</div>
-			<div class="s12 m4">
-				<h5><img class="iconic iconic-md" data-src="/static/images/iconic/magic-wand.svg"> So Simple, It's Magic</h5>
-				<p>Want to hit the ground running? Featurely offers a gorgeous customizable profile for your users to add new ideas and vote on others.</p>
-			</div>
-			<div class="s12 m4">
-				<h5><img class="iconic iconic-md" data-src="/static/images/iconic/connections.svg"> Multi-Platform</h5>
-				<p>Featurely was designed with developers in mind. It fully integrates into many different platforms.</p>
-			</div>
-			<div class="s12 m4">
-				<h5><img class="iconic iconic-md" data-src="/static/images/iconic/palette.svg"> Make It Your Own</h5>
-				<p>Use Featurely to easily gather feedback from your users right from your existing website (and soon mobile apps too!).</p>
-			</div>
-			<div class="s12 m4">
-				<h5><img class="iconic iconic-md" data-src="/static/images/iconic/bullhorn.svg"> Know What’s Happening</h5>
-				<p>Featurely keeps your users in-the-know by updating them on ideas they have suggested and voted for.</p>
-			</div>
-			<div class="s12 m4">
-				<h5><img class="iconic iconic-md" data-src="/static/images/iconic/map.svg"> Plan With Certainty</h5>
-				<p>Instead of guessing what features to implement next, Featurely shows you what your user want.</p>
-			</div>
-		</div>
-	</section>
-	
-	<section class="call-out">
-		<div class="grid">
-			<div class="s12 m6">
-				<p class="text-right">We Even Use Featurely For Featurely:</p>
-			</div>
-			<div class="s12 m6">
-				<div>
-					<a href="/featurely" class="button large action">
-						Check It Out, No Fool’n
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<section class="testimonials no-show">
-		
-		<div class="grid">
-			<div class="s12">
-				<h6 class="text-center">See What Our Customers Have To Say:</h6>
-			</div>
-			<div class="s12 m4">
-				<div class="panel">
-
-					<blockquote>
-						"Featurely is great and totally doesn't suck or anything.  In fact, it very much doesn't suck.  I'll use it until it folds like a cheap car table."
-					</blockquote>
-					<p>
-						- Mike Brennan <br>
-						<small>
-							Head of User Experience <br>
-  							MyLifeProtected
-  						</small>
-					</p>
+	<section class="sign-up">
+		<form action="post" id="sign-up">
+			<div class="grid">
+				<div class="s12 m6 clm">
+					<h2 class="text-center">Welcome to Featurely,<br> we're happy to have you!</h2>
+					<p>Just a few quick pieces of data and you’ll be on your merry way.<span class="payment no-show">  And because you selected one of our pay plans (Thanks!) we’ll need some quick payment info, too.</span>  You can switch plans at anytime, just visit the settings area on your account.</p>
 					
-					<img src="/static/images/mike.jpg" alt="">
-					
-					<a href="">See Our Featurely</a>
-					
-				</div>
-			</div>
-			<div class="s12 m4">
-				<div class="panel">
-					<blockquote>
-						"Featurely helps us keep tracking of all the stupid ideas our users have.  I mean, occasionally there's something useful, but it's mostly crap.
-					</blockquote>
-					<p>
-						- Vincent Summers <br>
-						<small>
-							CTO <br>
-							Company McCompanyFace
-  						</small>
-					</p>
-					
-					<img src="/static/images/mike.jpg" alt="">
-					
-					<a href="">See Our Featurely</a>
-				</div>				
-			</div>
-			<div class="s12 m4">
-				<div class="panel">
-					<blockquote>
-						"Featurely lets our users think they have a voice, even though we planned on adding almost all of their feature requests years ago."
-					</blockquote>
-					<p>
-						- Jean Griffin <br>
-						<small>
-							VP Customer Service <br>
-							Google
-  						</small>
-					</p>
-					
-					<img src="/static/images/mike.jpg" alt="">
-					
-					<a href="">See Our Featurely</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<section id="pricing" class="pricing">
-		<div class="grid">
-			<div class="s12">
-				<h6 class="text-center">Alright, downt to business, what's this going to cost me?</h6>
-			</div>
-		</div>
-		<div class="grid">
-			<div class="s12 m9 clm">
-				<div class="grid collapse">
-					<div class="s12 m4 clm">
-						<ul class="pricing-table startup">
-							<li class="title">StartUp Package</li>
-							<li class="price">$8/Month</li>
-							<li class="included">3 Projects</li>
-							<li class="included">30 Active Features</li>
-							<li class="included"><strike>Analytics</strike></li>
-							<li class="get-it"><a href="/sign-up.html?plan=startup" class="button medium fill success">Get It</a></li>
-						</ul>
-					</div>
-					<div class="s12 m4 clm">
-						<ul class="pricing-table series-b">
-							<li class="title">Series B Package</li>
-							<li class="price">$15/Month</li>
-							<li class="included">5 Projects</li>
-							<li class="included">50 Active Features</li>
-							<li class="included">Analytics</li>
-							<li class="get-it"><a href="/sign-up.html?plan=series-b" class="button large fill action">Get It</a></li>
-						</ul>
-					</div>
-					<div class="s12 m4 clm">
-						<ul class="pricing-table ipo">
-							<li class="title">IPO Package</li>
-							<li class="price">$35/Month</li>
-							<li class="included">Unlimited Projects</li>
-							<li class="included">Unlimited Active Features</li>
-							<li class="included">Analytics</li>
-							<li class="get-it"><a href="/sign-up.html?plan=ipo" class="button medium fill error">Get It</a></li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
-			<div class="s12 m3 clm">
-				<ul class="pricing-table prove-it">
-					<li class="title">Prove It Package</li>
-					<li class="price">Free Forever</li>
-					<li class="included">1 Project</li>
-					<li class="included">10 Active Features</li>
-					<li class="get-it"><a href="/sign-up.html?plan=prove-it" class="button medium fill">Get It</a></li>
-				</ul>
-			</div>
-		</div>
-
-	</section>
-	
-	<section class="contact no-show">
-		<div class="grid">
-			<div class="s12 m6">
-				<h6 class="text-center">
-					Have Questions?  Who Doesn't?
-				</h6>
-				<p>If all of this Featurely talk seems interesting, but you’re still unsure, drop us a line and we’ll do our best to to explian.</p>
-			</div>
-			<div class="s12 m6">
-				<form action="post">
 					<div class="grid">
-						<div class="s12 m6">
-							<label for="name">Name</label>
-							<input type="text" id="name" name="name">
-						</div>
-						<div class="s12 m6">
-							<label for="email">Email</label>
-							<input type="email" id="email" name="email">
+						<div class="s12 clm">
+							<label for="plan">Select Plan</label>
+							<select name="plan" id="plan">
+								<option value="prove-it" selected="selected">Prove It Package</option>
+								<option value="startup">StartUp Package</option>
+								<option value="series-b">Series B Package</option>
+								<option value="ipo">IPO Package</option>
+							</select>
 						</div>
 					</div>
-					<label for="question">Question</label>
-					<textarea name="question" id="question" cols="10" rows="10"></textarea>
-				</form>
-				<br>
-				<div class="grid">
-					<div class="s12 m6 center">
-						<div class="button large action fill">Get Back To Me</div>
-					</div>
-				</div>
+
+					<ul class="features prove-it">
+						<li class="price">Free Forever</li>
+						<li class="included">1 Project</li>
+						<li class="included">10 Active Features</li>
+						<li class="not-included"><strike>Analytics</strike></li>
+					</ul>
 				
+					<ul class="features startup no-show">
+						<li class="price">$8/Month</li>
+						<li class="included">3 Projects</li>
+						<li class="included">30 Active Features</li>
+						<li class="not-included"><strike>Analytics</strike></li>
+					</ul>
+
+					<ul class="features series-b no-show">
+						<li class="price">$15/Month</li>
+						<li class="included">5 Projects</li>
+						<li class="included">50 Active Features</li>
+						<li class="included">Analytics</li>
+					</ul>
+
+					<ul class="features ipo no-show">
+						<li class="price">$35/Month</li>
+						<li class="included">Unlimited Projects</li>
+						<li class="included">Unlimited Active Features</li>
+						<li class="included">Analytics</li>
+					</ul>
+					
+				</div>
+				<div class="s12 m6 clm">
+					<fieldset id="basic-info">
+						<legend>Personal Info</legend>
+						<div class="grid">
+							<div class="s12 m6 clm">
+								<label for="fname">First Name</label>
+								<input type="text" name="fname" id="fname">
+							</div>
+							<div class="s12 m6 clm">
+								<label for="lname">Last Name</label>
+								<input type="text" name="lname" id="lname">
+							</div>
+						</div>
+						<div class="grid">
+							<div class="s12">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email">
+							</div>
+						</div>
+						<div class="grid">
+							<div class="s12 m6 clm">
+								<label for="password">Password</label>
+								<input type="password" name="password" id="password">
+							</div>
+							<div class="s12 m6 clm">
+								<label for="password_again">Password Again</label>
+								<input type="password" name="password_again" id="password_again">
+							</div>
+						</div>
+					</fieldset>
+					<fieldset id="payment" class="no-show">
+						<legend>Billing Info</legend>
+						<div class="grid">
+							<div class="s12 clm">
+								<label for="name_on_card">Name On Card</label>
+								<input type="text" name="name_on_card" id="name_on_card">
+							</div>
+						</div>
+						<div class="grid">
+							<div class="s12 m8 clm">
+								<label for="card_number">Card Number</label>
+								<input type="text" name="card_number" id="card_number">
+							</div>
+							<div class="s12 m4 clm">
+								<label for="cvv">CVV</label>
+								<input type="number" name="cvv" id="cvv">
+							</div>
+						</div>
+					</fieldset>
+					<button id="make-it-rain" class="large action fill">Let’s DO THIS!</button>
+				</div>
 			</div>
-		</div>
+		</form>
 	</section>
 	
 	<footer>
@@ -292,6 +162,8 @@
 	<script src="/static/js/hindenburg.js"></script>
 	<script src="/static/js/jquery.validate.min.js"></script>
 	<script src="/static/js/additional-methods.js"></script>
+	<script src="/static/js/jquery.payment.js"></script>
+	<script src="/static/js/payment-page.js"></script>
 	
 	<script src="/static/js/css_browser_selector.js"></script>
 	

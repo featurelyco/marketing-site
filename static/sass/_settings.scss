@@ -70,12 +70,12 @@ $body-copy-font-family: $sans-serif;
 $link-color: $primary;
 
 // Header
-$header-bg:#313A48;
-$header-height:rem-me(60);
+$header-bg:$white;
+$header-height:rem-me(100);
 
 // Navigation
 $nav-height:74px;
-$nav-bg:transparent;
+$nav-bg:$white;
 $nav-direction:right; // Sets the float for the link
 $nav-font-size:$body-copy-font-size;
 $nav-font-family:$sans-serif;

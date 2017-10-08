@@ -4959,7 +4959,7 @@ blockquote {
 
 /* line 2, ../sass/_nav.scss */
 header {
-  background: #313A48;
+  background: #FFFFFF;
   z-index: 1000;
 }
 /* line 5, ../sass/_nav.scss */
@@ -4967,14 +4967,14 @@ header.top {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 3.75rem;
+  height: 6.25rem;
 }
 /* line 11, ../sass/_nav.scss */
 header.fixed {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 3.75rem;
+  height: 6.25rem;
 }
 /* line 18, ../sass/_nav.scss */
 header .clm {
@@ -4997,7 +4997,7 @@ header h1 a, header h1 .button, header h1 button {
 header nav.inline {
   float: right;
   display: inline-block;
-  background: transparent;
+  background: #FFFFFF;
 }
 /* line 36, ../sass/_nav.scss */
 header nav.inline .off-canvas {
@@ -5080,7 +5080,7 @@ header nav.inline ul li.drop:hover a::after, header nav.inline ol li.drop:hover 
 /* line 104, ../sass/_nav.scss */
 header nav.inline ul li.drop:hover ul.drop-menu, header nav.inline ol li.drop:hover ul.drop-menu, header nav.inline dl li.drop:hover ul.drop-menu, header nav.inline ul li.drop:hover ol.drop-menu, header nav.inline ol li.drop:hover ol.drop-menu, header nav.inline dl li.drop:hover ol.drop-menu, header nav.inline ul li.drop:hover dl.drop-menu, header nav.inline ol li.drop:hover dl.drop-menu, header nav.inline dl li.drop:hover dl.drop-menu {
   display: block;
-  background: #313A48;
+  background: #FFFFFF;
   position: absolute;
   right: 0;
   left: auto;
@@ -5117,7 +5117,7 @@ header nav.inline ul li.drop ul.drop-menu, header nav.inline ol li.drop ul.drop-
 @media (max-width: 56.25rem) {
   /* line 143, ../sass/_nav.scss */
   header {
-    background: #313A48;
+    background: #FFFFFF;
     z-index: 1000;
   }
   /* line 146, ../sass/_nav.scss */
@@ -7064,8 +7064,136 @@ footer p, footer dl dd, dl footer dd {
   margin-top: 4rem;
 }
 
+/* line 375, ../sass/styles.scss */
+header {
+  border-bottom: 1px solid #DDDDDD;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+/* line 378, ../sass/styles.scss */
+header h1 {
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  font-size: 0;
+  text-align: start;
+  background-image: url("/static/images/logo-horiz.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 0.625rem;
+}
+
+/* line 389, ../sass/styles.scss */
+#get-me-paid-bitch .sign-up {
+  padding-top: 9.375rem;
+  background: #3C96D2;
+}
+/* line 392, ../sass/styles.scss */
+#get-me-paid-bitch .sign-up h2 {
+  font-size: 2rem;
+  color: #2C3E4F;
+}
+/* line 396, ../sass/styles.scss */
+#get-me-paid-bitch .sign-up p, #get-me-paid-bitch .sign-up dl dd, dl #get-me-paid-bitch .sign-up dd {
+  font-size: 1.3125rem;
+  color: #D9EDFF;
+}
+/* line 400, ../sass/styles.scss */
+#get-me-paid-bitch .sign-up ul.features, #get-me-paid-bitch .sign-up ol.features, #get-me-paid-bitch .sign-up dl.features {
+  list-style-type: none;
+}
+/* line 402, ../sass/styles.scss */
+#get-me-paid-bitch .sign-up ul.features li, #get-me-paid-bitch .sign-up ol.features li, #get-me-paid-bitch .sign-up dl.features li {
+  font-size: 1.75rem;
+  color: #2C3E4F;
+  margin-bottom: 1rem;
+  margin-left: 10rem;
+}
+/* line 407, ../sass/styles.scss */
+#get-me-paid-bitch .sign-up ul.features li.price, #get-me-paid-bitch .sign-up ol.features li.price, #get-me-paid-bitch .sign-up dl.features li.price {
+  text-align: center;
+  font-size: 2.25rem;
+  color: #2C3E4F;
+  margin: 2rem 0;
+}
+/* line 413, ../sass/styles.scss */
+#get-me-paid-bitch .sign-up ul.features li.included:before, #get-me-paid-bitch .sign-up ol.features li.included:before, #get-me-paid-bitch .sign-up dl.features li.included:before {
+  position: relative;
+  top: 1px;
+  left: -10px;
+  font-family: 'Iconic';
+  display: inline-block;
+  speak: none;
+  line-height: 1;
+  vertical-align: baseline;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  content: '\e154';
+  color: #27B899;
+}
+/* line 429, ../sass/styles.scss */
+#get-me-paid-bitch .sign-up ul.features li.not-included, #get-me-paid-bitch .sign-up ol.features li.not-included, #get-me-paid-bitch .sign-up dl.features li.not-included {
+  color: #485562;
+}
+/* line 431, ../sass/styles.scss */
+#get-me-paid-bitch .sign-up ul.features li.not-included:before, #get-me-paid-bitch .sign-up ol.features li.not-included:before, #get-me-paid-bitch .sign-up dl.features li.not-included:before {
+  position: relative;
+  top: 1px;
+  left: -10px;
+  font-family: 'Iconic';
+  display: inline-block;
+  speak: none;
+  line-height: 1;
+  vertical-align: baseline;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  content: '\e26c';
+  color: #E44C3B;
+}
+/* line 451, ../sass/styles.scss */
+#get-me-paid-bitch #card_number {
+  transition: none;
+}
+/* line 453, ../sass/styles.scss */
+#get-me-paid-bitch #card_number.visa {
+  background: url('/static/images/visa.svg?1499276887') no-repeat 95% center;
+  background-size: 20%;
+}
+/* line 457, ../sass/styles.scss */
+#get-me-paid-bitch #card_number.amex {
+  background: url('/static/images/amex.svg?1499276887') no-repeat 95% center;
+  background-size: 20%;
+}
+/* line 461, ../sass/styles.scss */
+#get-me-paid-bitch #card_number.discover {
+  background: url('/static/images/discover.svg?1499276887') no-repeat 95% center;
+  background-size: 20%;
+}
+/* line 465, ../sass/styles.scss */
+#get-me-paid-bitch #card_number.mastercard {
+  background: url('/static/images/mastercard.svg?1499276887') no-repeat 95% center;
+  background-size: 20%;
+}
+/* line 470, ../sass/styles.scss */
+#get-me-paid-bitch #make-it-rain {
+  margin-bottom: 5rem;
+}
+
+/* line 476, ../sass/styles.scss */
+fieldset legend {
+  font-family: "Saira Condensed", "Helvetica Neue Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #2C3E4F;
+  margin-bottom: 0.75rem;
+}
+
 @media (max-width: 56.25rem) {
-  /* line 377, ../sass/styles.scss */
+  /* line 486, ../sass/styles.scss */
   section.hero .what-is-this {
     margin-top: 0rem;
     padding-top: 12.5rem;
@@ -7075,57 +7203,57 @@ footer p, footer dl dd, dl footer dd {
     z-index: 100;
     position: relative;
   }
-  /* line 385, ../sass/styles.scss */
+  /* line 494, ../sass/styles.scss */
   section.hero .what-is-this h3 {
     font-family: "Saira Condensed", "Helvetica Neue Regular", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 3rem;
     color: #27B899;
   }
-  /* line 391, ../sass/styles.scss */
+  /* line 500, ../sass/styles.scss */
   section.hero .what-is-this p, section.hero .what-is-this dl dd, dl section.hero .what-is-this dd {
     font-size: 1.25rem;
     color: #2C3E4F;
   }
-  /* line 395, ../sass/styles.scss */
+  /* line 504, ../sass/styles.scss */
   section.hero .what-is-this ul li, section.hero .what-is-this ol li, section.hero .what-is-this dl li {
     font-size: 1.25rem;
     margin: 0.4375rem 0;
     color: #27B899;
   }
-  /* line 399, ../sass/styles.scss */
+  /* line 508, ../sass/styles.scss */
   section.hero .what-is-this ul li span.text, section.hero .what-is-this ol li span.text, section.hero .what-is-this dl li span.text {
     color: #2C3E4F;
   }
 
-  /* line 405, ../sass/styles.scss */
+  /* line 514, ../sass/styles.scss */
   section.call-out p, section.call-out dl dd, dl section.call-out dd {
     text-align: center;
     line-height: 2rem;
   }
-  /* line 409, ../sass/styles.scss */
+  /* line 518, ../sass/styles.scss */
   section.call-out a, section.call-out .button, section.call-out button {
     display: block;
   }
 
-  /* line 413, ../sass/styles.scss */
+  /* line 522, ../sass/styles.scss */
   section.testimonials .panel {
     margin-bottom: 4rem;
   }
 
-  /* line 416, ../sass/styles.scss */
+  /* line 525, ../sass/styles.scss */
   section.pricing .grid.collapse {
     margin: 0 20px;
   }
-  /* line 419, ../sass/styles.scss */
+  /* line 528, ../sass/styles.scss */
   section.pricing .grid.collapse .pricing-table {
     margin-bottom: 1rem;
   }
-  /* line 421, ../sass/styles.scss */
+  /* line 530, ../sass/styles.scss */
   section.pricing .grid.collapse .pricing-table.startup, section.pricing .grid.collapse .pricing-table.series-b, section.pricing .grid.collapse .pricing-table.ipo {
     border-radius: 20px;
   }
-  /* line 423, ../sass/styles.scss */
+  /* line 532, ../sass/styles.scss */
   section.pricing .grid.collapse .pricing-table.startup .title, section.pricing .grid.collapse .pricing-table.series-b .title, section.pricing .grid.collapse .pricing-table.ipo .title {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
